@@ -31,3 +31,9 @@ nickName = "?"
 
 // 변수는 차후에 다시 다른 값을 할당해도 문제가 없지요
 nickName = "dog"
+
+// 생각해보기
+let name = "yagom"
+var numberToAdd = 5
+let name = 3.14159
+var maxItemCount = 1000
