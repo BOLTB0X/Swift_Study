@@ -8,4 +8,12 @@ func solution(_ n:Int) -> Int {
         answer += i
     }
     return answer
+
+   
+} 
+
+// 다른 풀이
+func solution(_ n:Int) -> Int {
+    // 다른 풀이
+    (1...n).filter{ $0 % 2 == 0 }.reduce(0,+)
 }
