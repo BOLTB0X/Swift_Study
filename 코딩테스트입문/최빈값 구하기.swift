@@ -1,27 +1,30 @@
 import Foundation
 
 func solution(_ array:[Int]) -> Int {
-    var dict: [Int : Int] = [:] // key = 원소 : value = 빈도수 
-    var maxKey = 0 // 키값을 리턴해야 하므로 선언
-    var cnt = 0 // 중복 방지용
+    var dict : [Int : Int] = [:] // 편의를 위한 딕셔너리 이용
+    var maxKey : Int = 0 // 가장 많이 나온 원소
+    var cnt : Int = 0 // 마지막 리턴 체크를 위해 선언
     
-    for ele in array {
-        // 딕셔너리 안에 key 값이 존재하면
-        if dict.contains{$0.key == ele} {
-            dict[ele]! += 1 // 카운트
+    // 배열 원소를 순회하며
+    for a in array {
+        // 딕셔너리 안에 원소가 딕셔너리의 key로 존재한다면
+        if dict.contains{$0.key == a} {
+            dict[a]! += 1 // 카운트
         } else { // 없다면
-            dict[ele] = 1 // 만들어줌
+            dict[a] = 1 // 1로 생성
         }
     }
     
+    // 딕셔너리를 순회하며 최빈값 체크
     for (key, value) in dict {
-        // 현재 값이 딕셔너리 벨류중 중에 최댓값이 면
+        // 해당 value 가 딕셔너리 내 최댓값이면
         if value == dict.values.max() {
-            cnt += 1 // 카운트
-            maxKey = key // 키값 교체
+            maxKey = key
+            cnt += 1 
         }
     }
     
-    // 중복이 아니면 maxKey, 맞으면 -1
+    // 최빈값이 하나면 maxKey
+    // 아니면 -1
     return cnt == 1 ? maxKey : -1
 }

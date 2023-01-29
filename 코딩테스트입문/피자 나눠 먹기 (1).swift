@@ -1,5 +1,5 @@
 import Foundation
 
 func solution(_ n:Int) -> Int {
-    return Int(ceil(Double(n) / 7.0))
+    return Int(ceil(Double(n) / 7.0)) // ceil 이용
 }

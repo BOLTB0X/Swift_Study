@@ -1,9 +1,5 @@
 import Foundation
 
 func solution(_ numbers:[Int]) -> [Int] {
-    var answer : [Int] = []
-    for num in numbers {
-         answer.append(num * 2)
-    }
-    return answer
+    numbers.map { $0 * 2 } // map 이용 
 }
