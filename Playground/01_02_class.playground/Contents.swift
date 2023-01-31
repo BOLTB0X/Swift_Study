@@ -76,7 +76,7 @@ class Student {
     }
     
     // 인스턴스 메서드
-    // self는 인스턴스 자신을 지칭하며, 몇몇 경우를 제외하고 사용은 선택사항입니다
+    // self는 인스턴스 자신을 지칭하며, 몇몇 경우를 제외하고 사용은 선택사항
     func selfIntroduce() {
         print("저는 \(self.class)반 \(name)입니다")
     }

@@ -1,6 +1,6 @@
 import UIKit
 
-//MARK: 예제 클래스 및 인스턴스 생성
+// 클래스 및 인스턴스 생성
 class Person {
     var name: String
     var job: String?

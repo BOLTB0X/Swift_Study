@@ -74,11 +74,8 @@ case is Person:
 default:
     print("kh4은 사람도, 학생도, 대학생도 아닙니다")
 } // kh4은 대학생입니다
-//MARK: - 업 캐스팅
-// as를 사용하여 부모클래스의 인스턴스로 사용할 수 있도록
-// 컴파일러에게 타입정보를 전환해줍니다
-// Any 혹은 AnyObject로도 타입정보를 변환할 수 있습니다
-// 암시적으로 처리되므로 생략해도 무방합니다
+
+// as를 사용하여 부모클래스의 인스턴스로 사용할 수 있도록 컴파일러에게 타입정보를 전환해줍니다 Any 혹은 AnyObject로도 타입정보를 변환 암시적으로 처리되므로 생략해도 무방
 var mike: Person = UniversityStudent() as Person
 var jenny: Student = Student()
 //var jina: UniversityStudent = Person() as UniversityStudent // 컴파일 오류
@@ -86,9 +83,7 @@ var jina: Any = Person() // as Any 생략가능
 
 //MARK: - 다운 캐스팅
 // as? 또는 as!를 사용하여
-// 자식 클래스의 인스턴스로 사용할 수 있도록
-// 컴파일러에게 인스턴스의 타입정보를 전환해줍니다
-//MARK: 조건부 다운 캐스팅
+// 자식 클래스의 인스턴스로 사용할 수 있도록 컴파일러에게 인스턴스의 타입정보를 전환
 // as?
 var optionalCasted: Student?
 
