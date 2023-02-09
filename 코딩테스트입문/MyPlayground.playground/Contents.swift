@@ -7,7 +7,10 @@ var skip:String = "wbqd"
 var index:Int = 5
 var answer: String = ""
 
-var age:Int = 23
-String(age).map {
-    String(UnicodeScalar(UInt8(Int(String($0))! + 97)))
-}.joined(separator: "")
+var box = [10, 8 ,6]
+
+for b in box {
+    print("\(b/3)")
+}
+
+print(box.map {$0 / 3}.reduce(1, *))
