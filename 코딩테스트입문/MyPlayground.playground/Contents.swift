@@ -1,13 +1,15 @@
 import UIKit
 
-var s:String = "aukks"
-var skip:String = "wbqd"
+var answer = 0
 
+var coke = 20
 
-var index:Int = 5
-var answer: String = ""
-
-var box = ["a", "b" ,"c"]
-print(box[0..<3].joined(separator: ""))
-
+while coke > 2 {
+    answer += ((coke / 2) * 1)
+    coke /= 2
+    print(answer)
+    if coke % 2 != 0{
+        answer += 1
+    }
+}
 
