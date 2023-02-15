@@ -4,12 +4,8 @@ var answer = 0
 
 var coke = 20
 
-while coke > 2 {
-    answer += ((coke / 2) * 1)
-    coke /= 2
-    print(answer)
-    if coke % 2 != 0{
-        answer += 1
-    }
-}
+var array = [3, 10, 28]
+var n = 20
 
+
+print(array.min { $0 <  $1}!)
