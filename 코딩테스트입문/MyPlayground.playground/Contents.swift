@@ -8,6 +8,8 @@ var answer : [Int] = []
 var p = [93,30,55]
 var speeds = [1,30,5]
 
+print(speeds.sorted(by: >))
+
 while p.count > 0 {
     var cnt: Int = 0
     for i in 0..<speeds.count {
