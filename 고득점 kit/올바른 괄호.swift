@@ -12,7 +12,7 @@ func solution(_ s:String) -> Bool {
             bracketCount -= 1
         }
         
-        // 만약 괄호가 0보다 작아지면
+        // 만약 괄호가 0보다 작아지면 즉, 괄호가 맞지 않다는 뜻
         if bracketCount < 0 {
            return false
         }
