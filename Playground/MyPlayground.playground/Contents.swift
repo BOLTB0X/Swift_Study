@@ -10,3 +10,7 @@ print(b)
 for i in aaa.indices {
     print(aaa[i])
 }
+
+var val: Int64 = 118372
+var arr = Int64(String(val).compactMap{String($0)}.sorted(by: >).joined(separator : ""))!
+print(arr)
