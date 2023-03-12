@@ -15,7 +15,7 @@ cf. 자식 객체는 상속된 부모 객체의 은닉화되어진 구성에 따
 
 ## 기본 클래스
 
-```
+```swift
 class Human {
 var field: String?
 var age: Int?
@@ -30,7 +30,7 @@ cf. 뒤에 ‘Hashable’같은 프로토콜을 채택해도 base class에 속�
 
 ## 서브클래싱(Subclassing)
 
-```
+```swift
 class Coder: Human { // class Human의 속한 프로퍼티들도 싹다 사용 가능
 	var noteBook: String?
 }
@@ -54,7 +54,7 @@ Cf) 메소드도 상속 가능~
 
 ## final: 상속을 금지
 
-```
+```swift
 final class Human {
     var field: String?
     var age: Int?
@@ -65,7 +65,7 @@ final class Human {
 
 > 상속할 인스턴스 메서드, 타입 메서드, 인스턴스 프로퍼티, 타입 프로포티, 서브스크립트을 상속할 것 기반으로 구현 및 수정하는 것이 Overriding
 
-```
+```swift
 class Coder: Human {
 	override func description() {
 		print(“iOS입니다”)
@@ -105,7 +105,7 @@ cf. 변경 가능한 프로퍼티를 read-only 프로퍼티로 오버라이딩 �
 
 > 저장 프로퍼티 예시
 
-```
+```swift
 class Coder: Human {
     var filed = “iOS"
 
@@ -125,7 +125,7 @@ class Coder: Human {
 위와 마찬가지로 getter/setter 구현
 <br/>
 
-```
+```swift
 class Human {
     var name = "lkh"
 
@@ -139,7 +139,9 @@ class coder: Human {
         return self.name + " iOS”
     }
 }
+```
 
+```swift
 class anotherCoder: Human {
     override var feild: String {
         get {
@@ -150,12 +152,11 @@ class anotherCoder: Human {
         }
     }
 }
-
 ```
 
 cf.만약 이런형태로 superclass가 선언 되어있다면
 
-```
+```swift
 class Human {
     var name = "3kh"
 
@@ -186,7 +187,7 @@ class Coder: Human {
 
 ### 저장 프로퍼티
 
-```
+```swift
 class Human {
     var name = "lkh"
 }
@@ -215,7 +216,7 @@ getter / setter가 모두 구현된 연산 프로퍼티만 프로퍼티 옵저�
 getter / setter 가 모두 붙어있는 프로퍼티만 오버라이딩해서 프로퍼티 옵저버를 추가 가능
 <br/>
 
-```
+```swift
 class Human {
     var name = "lkh"
 

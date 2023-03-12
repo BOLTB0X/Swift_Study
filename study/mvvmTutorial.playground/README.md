@@ -14,7 +14,7 @@ Models은 application data 를 보유 및 관리(hold)
 
 ex)
 
-```
+```swift
 public class Pet {
     public enum Rarity {
         case common
@@ -56,7 +56,7 @@ Model data를 View에 나타내는 값으로 변환
 
 ex)
 
-```
+```swift
 public class PetViewModel {
     // 2개의 private 프로퍼티를 생성, init
     private let pet: Pet
