@@ -1,6 +1,4 @@
-import UIKit
-
-var phone_book = ["119", "97674223", "1195524421"]
+import Foundation
 
 func solution(_ phone_book: [String]) -> Bool {
     var phone_book = phone_book // 편의용
@@ -18,5 +16,3 @@ func solution(_ phone_book: [String]) -> Bool {
     }
     return true
 }
-
-print(solution(phone_book))
