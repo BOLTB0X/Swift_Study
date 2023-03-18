@@ -1,18 +1,22 @@
-import UIKit
 import Foundation
 
-var nums = [3,1,2,3]
+var prices = [1, 2, 3, 2, 3]
 
-var answer:Int = 0
-let N:Int = nums.count/2 // 길의 반
+var answer:[Int] = []
+var que = prices // 큐 로
 
-// 집합 이용
-var selected:Set<Int> = []
-
-for n in nums {
-    selected.insert(n)
+while que.count > 0 {
+    var cur = que.first!
+    que.removeFirst()
+    var cnt:Int = 0
+    
+    for q in que {
+        cnt += 1
+        if cur > q {
+            break;
+        }
+    }
+    
+    answer.append(cnt)
 }
-
-answer = selected.count <= N ? selected.count : N
-
 print(answer)
