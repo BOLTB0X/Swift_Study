@@ -1,28 +1,18 @@
 import UIKit
 import Foundation
 
-var arr = [1,1,3,3,0,1,1]
+var nums = [3,1,2,3]
 
-func solution(_ arr: [Int]) -> [Int] {
-    var answer:[Int] = [] // 정답
-    var st:[Int] = [] // 스택
+var answer:Int = 0
+let N:Int = nums.count/2 // 길의 반
 
-    // 단순풀이
-    for i in 0..<arr.count {
-        if st.count == 0 {
-            st.append(arr[i])
-            answer.append(arr[i])
-        } else {
-            // 같은 숫자를 보면
-            if st.last == arr[i] {
-                continue
-            }
-            // 다른 숫자이니 넣어줌
-            st.append(arr[i])
-            answer.append(arr[i])
-        }
-    }
-    return answer
+// 집합 이용
+var selected:Set<Int> = []
+
+for n in nums {
+    selected.insert(n)
 }
 
-print(solution(arr))
+answer = selected.count <= N ? selected.count : N
+
+print(answer)
