@@ -178,7 +178,13 @@ BOutlet, API 에서 IUO를 리턴한 경우에 주로 사용
 
 > 옵셔널값 ?? 기본값
 > <br/>
-> 옵셔널 값이 nil이 아니면 옵셔널을 언래핑한 값을, nil이면 ?? 뒤의 기본값을 사용
-> <br/>
-> 옵셔널값 과 기본값은 옵셔널을 벗기면 동일한 타입이어야 사용 가능
-> <br/>
+
+옵셔널 값이 nil이 아니면 옵셔널을 언래핑한 값을, nil이면 ?? 뒤의 기본값을 사용
+<br/>
+옵셔널값 과 기본값은 옵셔널을 벗기면 동일한 타입이어야 사용 가능
+<br/>
+
+## 참고 및 도움을 준
+
+https://velog.io/@bibi6666667/Swift-옵셔널-언래핑-방법들-정리
+https://developer.apple.com/documentation/swift/optional
