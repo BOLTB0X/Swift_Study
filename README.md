@@ -5,7 +5,7 @@
 
 ## swift
 
-- [문법](https://github.com/BOLTB0X/Swift_Study/tree/main/simpleGrammar)
+- [문법](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
   <br/>
 
 - [코딩테스트입문](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩테스트입문)
@@ -28,10 +28,11 @@
 
 ## study
 
-업무를 진행하거나 혼자서 공브할때마다 반복적으로 이해가 되지 않았던가 필요성을 느낌 것들
+업무를 진행하거나 혼자서 공브할때마다 반복적으로 이해가 되지 않았던가 필요성을 느낀 것들을 정리
 <br/>
-
 [study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
 <br/>
+
+---
 
 마크다운 파일 추가 중
