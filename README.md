@@ -28,12 +28,14 @@
 
 <br/>
 
-## [study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
+## study
 
+[여기를 클릭](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
 <br/>
 
-## [swiftGrammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
+## swiftGrammar
 
+[여기를 클릭](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
 <br/>
 
 ---
