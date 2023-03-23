@@ -13,7 +13,8 @@
 저 강의 2개는 별도의 정리 노션및 문서들이 있어 제가 공부하다 자주 검색해 보았던 것들 위주로 playground와 md파일을 작성할 계획
 <bt/>
 
-- [string 관련 함수들]()
+- [string 관련 함수들](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringMethod.md)
+- [Codable](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/playground/MyPlayground2.playground)
 
 ## 참고
 

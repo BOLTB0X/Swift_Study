@@ -26,11 +26,14 @@
 
 ### 백준
 
-## study
-
-업무를 진행하거나 혼자서 공브할때마다 반복적으로 이해가 되지 않았던가 필요성을 느낀 것들을 정리
 <br/>
-[study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
+
+## [study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
+
+<br/>
+
+## [swiftGrammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
+
 <br/>
 
 ---
