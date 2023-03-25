@@ -17,3 +17,6 @@
 
 - [MVVM](https://github.com/BOLTB0X/Swift_Study/tree/main/study/mvvmTutorial.playground)
   <br/>
+
+- [SingleTon](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Singleton)
+  <br/>

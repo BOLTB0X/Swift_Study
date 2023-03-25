@@ -18,7 +18,7 @@
 
 ## 참고
 
-- [boostcourse의 iOS 프로그래밍을 위한 스위프트 기초와](https://www.boostcourse.org/mo122/notices/9880)
+- [boostcourse의 iOS 프로그래밍을 위한 스위프트 기초](https://www.boostcourse.org/mo122/notices/9880)
   <br/>
 
 - [유튜브 개발하는 정대리 스위프트 기초 문법](https://www.youtube.com/watch?v=EXtpt5Skzck&list=PLgOlaPUIbynoqbQw_erl3L2w7vfOTCtFD)

@@ -94,7 +94,7 @@ Singleton Instance가 너무 많은 일을 하거나, 많은 데이터를 공유
 
 ## Thread-Safe
 
-[여기를 클릭해주세요]()
+[여기를 클릭해주세요](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Singleton/swiftthread.md)
 
 ---
 
