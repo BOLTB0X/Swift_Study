@@ -7,8 +7,6 @@ struct Human: Codable {
 
 let lkh = Human(field: "dev", age: 30)
 
-print(lkh)
-
 let encoder = JSONEncoder()
 
 // human 구조체의 인스턴스 생성

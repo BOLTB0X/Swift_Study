@@ -57,3 +57,13 @@ if let data = data, let human = try? decoder.decode(Dinner.self, from: data) {
     print(human.age)
 }
 ```
+
+---
+
+## 참고
+
+https://developer.apple.com/documentation/swift/codable
+<br/>
+
+https://shark-sea.kr/entry/Swift-Codable-알아보기
+<br/>
