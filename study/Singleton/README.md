@@ -32,9 +32,31 @@ Capp.grade = 3.6
 ```
 
 위 코드처럼 ViewController마다 인스턴스를 계속 생성하거나 인스턴스를 필요할 때마다 참조로 넘겨주는 방법은 메모리의 낭비가 일어나거나 코드가 복잡해짐
-
 <br/>
+
 즉 이럴때 싱글톤 패턴을 사용하면 하나의 인스턴스에 어디 클래스에서든 접근이 가능
+<br/>
+
+```swift
+class ApplyInfo {
+    // 전역으로 저장되는 형태를 사용하므로
+    // static을 이용해 Instance를 저장할 프로퍼티를 하나 생성
+    static let shared = ApplyInfo()
+
+    var name: String?
+    var age: Int?
+    var grade: Double?
+
+    // init 메서드를 private로 지정
+    // 인스턴스를 자꾸 생성하는 것을 방지하기 위해 FM으로는 private로 쓴다 함
+    private init() {
+
+    }
+
+}
+```
+
+init 메서드를 private로 지정, 인스턴스를 자꾸 생성하는 것을 방지하기 위해 FM으로는 private로 쓴다 함
 <br/>
 
 ```swift
@@ -67,7 +89,18 @@ applyInst.grade = 3.6
 
 ## 싱글톤의 단점
 
-Singleton Instance가 너무 많은 일을 하거나, 많은 데이터를 공유시킬 경우 다른 클래스의 Instance들 간 결합도가 높아져 "개방 = 폐쇄" 원칙을 위배함 (객체 지향 설계 원칙에 위배)
+Singleton Instance가 너무 많은 일을 하거나, 많은 데이터를 공유시킬 경우 다른 클래스의 Instance들 간 결합도가 높아져 "개방 = 폐쇄" 원칙을 위배함 (객체 지향 설계 원칙에 위배) 따라서 수정과 테스트가 어려워짐
 <br/>
-따라서 수정과 테스트가 어려워짐
+
+## Thread-Safe
+
+[여기를 클릭해주세요]()
+
+---
+
+## 참고
+
+https://babbab2.tistory.com/66
+<br/>
+https://fomaios.tistory.com/entry/iOS-면접질문-싱글톤-패턴이란-Swift-Singletone-Pattern
 <br/>
