@@ -87,5 +87,14 @@ print(students) // ["Ben", "Ivy", "Jordell", "Benjamin", "Max"]"
    > Returns the index of the last element in the collection that matches the given predicate.
    > <br/>
 
-   지정된 특정 것과 일치하는 컬렉션의 마지막 요소 인덱스를 반환
+   지정된 특정 것과 일치하는 컬렉션의 마지막 요소 옵셔널 인덱스를 반환
    <br/>
+
+```swift
+let students = ["Kofi", "Abena", "Peter", "Kweku", "Akosua"]
+
+if let i = students.lastIndex(where: { $0.hasPrefix("A") }) {
+    print("\(students[i]) starts with 'A'!") // "Akosua starts with 'A'!"
+}
+// O(n), where n is the length of the collection.
+```

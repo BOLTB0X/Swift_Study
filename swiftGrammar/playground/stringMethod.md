@@ -35,54 +35,23 @@ for c in str {
 이렇게 사용할 수가 없음 그래서 관련 함수들을 정리하고 함
 <br/>
 
-## 기본 속성
+## 목록
 
-- 문자열 길이 확인 count (Int)
+1. [문자열 기본]("")
+   <br/>
+
+2. 인덱스 관련 (firstIndex, lastIndex.....)
+
+- [Chararcter Index Find(firstIndex, lastIndex)]("")
   <br/>
 
-- 빈 문자열 확인 isEmpty (Bool)
+- [Index Find(startIndex, lastIndex))]("")
   <br/>
 
-- 반복되는 문자열로 초기화 init(repeating: String, count: Int)
-  <br/>
+3. [contains]("")
+   <br/>
 
-- 포맷 활용하기 init(format: String, CVarArg...)
-  <br/>
-
-- 문자열 삽입: ex) "element : \(c)"
-  <br/>
-
-## 문자열 삽입
-
-```swift
-"element : \(c)"
-```
-
-<br/>
-
-## 문자열 결합
-
-```swift
-let str:String = "swift"
-let str2 = "스위프트"
-
-print(str+str2) // swift스위프트
-```
-
-## 문자열 비교
-
-아스키 코드로 계산함
-<br/>
-
-```swift
-let a = "1"
-let b = "2"
-let c = "a"
-let d = "b"
-
-print(a > b) // false
-print(c < d) // true
-```
+4.
 
 ## 참고
 
