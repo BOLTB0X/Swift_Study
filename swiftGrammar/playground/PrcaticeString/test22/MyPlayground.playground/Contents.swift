@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 let str = "ABCDEFG"
 str[str.startIndex] // A
@@ -38,3 +38,11 @@ let students4 = ["Kofi", "Abena", "Peter", "Kweku", "Akosua"]
 if let i = students4.lastIndex(where: { $0.hasPrefix("A") }) {
     print("\(students4[i]) starts with 'A'!") // "Akosua starts with 'A'!"
 }
+
+var ssstr = "Kofi"
+
+// 문자열의 인덱스는 정수값이 아니기 때문에
+let i = ssstr.index(ssstr.startIndex, offsetBy: 4)
+ssstr.insert("K", at: i) //KKofi
+
+print(ssstr)

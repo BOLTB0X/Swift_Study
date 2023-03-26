@@ -37,32 +37,39 @@ for c in str {
 
 ## 목록
 
-1. [문자열 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringComm.md)
-   <br/>
+1. 기본
+
+- [문자열 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringComm.md)
+  <br/>
+
+  -[삽입]()
+  <br/>
 
 2. 인덱스 관련
 
 - [first, last](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/firstlast.md)
   <br/>
 
-- [Index](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/IndexFind.md)
+- [Index](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/Index.md)
   <br/>
 
 3. Bool형 반환
 
-- [contains]()
+- [contains](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/contains.md)
   <br/>
 
-- [hasPrefix과 hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/hasSuffix.md)
+- [hasPrefix, hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/hasSuffix.md)
   <br/>
 
-- [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/allSatisfy.md)
+- [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/allSatisfy.md)
   <br/>
 
 4. 기타
 
-- [split]()
+- [split](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/split.md)
   <br/>
+
+- [배열을 문자열로](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringApply.md)
 
 ## 참고
 
