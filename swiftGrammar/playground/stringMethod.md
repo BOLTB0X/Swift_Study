@@ -62,6 +62,11 @@ for c in str {
 - [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/allSatisfy.md)
   <br/>
 
+4. 기타
+
+- [split]()
+  <br/>
+
 ## 참고
 
 - https://tngusmiso.tistory.com/46
