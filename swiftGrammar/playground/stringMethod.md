@@ -42,7 +42,7 @@ for c in str {
 
 2. 인덱스 관련 (firstIndex, lastIndex.....)
 
-- [first, last]()
+- [first, last](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/firstlast.md)
   <br/>
 
 - [Chararcter Index Find(firstIndex, lastIndex)](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/chararcterFindIndex.md)
@@ -53,13 +53,13 @@ for c in str {
 
 3. Bool형 반환
 
-- [contains](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/contains.md)
+- [contains]()
   <br/>
 
-- [hasPrefix과 hasSuffix]()
+- [hasPrefix과 hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/hasSuffix.md)
   <br/>
 
-- [allSatisfy]()
+- [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/allSatisfy.md)
   <br/>
 
 ## 참고
