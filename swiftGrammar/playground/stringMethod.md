@@ -37,18 +37,18 @@ for c in str {
 
 ## 목록
 
-1. [문자열 기본]("")
+1. [문자열 기본]("https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/stringComm.md")
    <br/>
 
 2. 인덱스 관련 (firstIndex, lastIndex.....)
 
-- [Chararcter Index Find(firstIndex, lastIndex)]("")
+- [Chararcter Index Find(firstIndex, lastIndex)]("https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/chararcterFindIndex.md")
   <br/>
 
-- [Index Find(startIndex, lastIndex))]("")
+- [Index Find(startIndex, lastIndex))]("https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/IndexFind.md")
   <br/>
 
-3. [contains]("")
+3. [contains]("https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/PrcaticeString/MyPlayground01.playground/contains.md")
    <br/>
 
 4.
