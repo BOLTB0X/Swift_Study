@@ -42,7 +42,7 @@ for c in str {
 - [문자열 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringComm.md)
   <br/>
 
-  -[삽입]()
+- [삽입](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/insert.md)
   <br/>
 
 2. 인덱스 관련
