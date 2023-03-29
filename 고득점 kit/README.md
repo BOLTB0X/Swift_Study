@@ -27,7 +27,7 @@
 - [K번쨰수](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/정렬/K번째수)
   <br/>
 
-- [가장 큰 수]()
+- [가장 큰 수](https://github.com/BOLTB0X/Swift_Study/blob/main/고득점%20kit/정렬/가장%20큰%20수/README.md)
   <br/>
 
 - [H-Index](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/정렬/H-Index)
