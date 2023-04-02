@@ -50,6 +50,12 @@
 - [최소직사가형](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/최소직사각형)
   <br/>
 
+- [모의고사](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모의고사)
+  <br/>
+
+- [모음사전](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모음%20사전)
+  <br/>
+
 ---
 
 ### 그리디
@@ -61,6 +67,12 @@
 ---
 
 ### 깊이/너비 우선 탐색(DFS/BFS)
+
+- [타겟넘버](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/DFSBFS/타겟%20넘버)
+  <br/>
+
+- [게임 맵 최단거리](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/DFSBFS/게임%20맵%20최단거리)
+  <br/>
 
 ---
 
