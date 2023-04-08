@@ -27,5 +27,5 @@
 - [톱니바퀴]()
   <br/>
 
-- [주사위 굴리기]()
+- [주사위 굴리기](https://github.com/BOLTB0X/Swift_Study/tree/main/BOJ/시뮬레이션/BOJ14499)
   <br/>
