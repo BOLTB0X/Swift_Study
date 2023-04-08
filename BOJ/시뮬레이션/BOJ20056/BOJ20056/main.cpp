@@ -108,7 +108,6 @@ void moving(int y, int x, int m, int s, int d) {
     
     // 격자판에 표시
     board[ny][nx].push_back({ny, nx, m, s, d});
-    
 }
 
 // MARK: 플이
