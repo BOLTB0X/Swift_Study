@@ -1,54 +1,20 @@
-# 고득점 kit > 완전탐색 > 전력망을 둘로 나누기
-
-## 문제
-
-Level 2
-<br/>
-문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/86971?language=swift
-<br/>
-문제설명, 제한사항 생략
-<br/>
-
-## Intro
-
-문제를 이해해야함
-<br/>
-
-## 풀이
-
-> n개의 송전탑이 전선을 통해 하나의 트리 형태로 연결되어 있습니다.
-> <br/>
-
-트리를 형태라는 말이 있긴 하지만 그냥 인접행렬로 풀 수 있음
-<br/>
-
-```swift
-// 인접행렬 이용
-var adjMat:[[Int]] = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
-```
-
-TODO
-
-## 최종 코드
-
-```swift
 import Foundation
 
 func solution(_ n:Int, _ wires:[[Int]]) -> Int {
     // 개수의 차이 값을 최대한 맞춘다
     // 즉 절대값 중 최솟값을 쓴다는 말
     var answer = Int.max;
-
+    
     // 인접행렬 이용
     var adjMat:[[Int]] = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
-
+    
     // MARK: adj식 BFS
     func BFS(_ start: Int) -> Int{
         var res: Int = 0
         var visited:[Bool] = Array(repeating: false, count: n+1)
         var que:[Int] = [start]
         visited[start] = true
-
+        
         while (que.count > 0) {
             var cur = que.removeFirst()
             res += 1
@@ -59,49 +25,60 @@ func solution(_ n:Int, _ wires:[[Int]]) -> Int {
                 if visited[i.0] {
                     continue
                 }
-
+                
                 // 미연결
                 if i.1 == 0 {
                     continue;
                 }
-
+                
                 visited[i.0] = true
                 que.append(i.0) // 연결된 노드
             }
-
+            
         }
-
+        
         return res
     }
-
+    
     // 인접행렬 연결
     for i in 0..<wires.count {
         // 양방향이므로
         adjMat[wires[i][0]][wires[i][1]] = 1
         adjMat[wires[i][1]][wires[i][0]] = 1
     }
-
+    
     //print(adjMat)
-
+    
     // for문으로 연결을 끊을 wire을 하나식 선정하며
     // 완전탐색 진행
     for i in 0..<wires.count {
         // 연결 해제
         adjMat[wires[i][0]][wires[i][1]] = 0
         adjMat[wires[i][1]][wires[i][0]] = 0
-
+        
         // 끊은 노드로 BFS 탐색
         let ret1 = BFS(wires[i][0])
         let ret2 = BFS(wires[i][1])
-
+        
         answer = min(answer, abs(ret1-ret2))
-
+        
         // 다시 연결
         adjMat[wires[i][0]][wires[i][1]] = 1
         adjMat[wires[i][1]][wires[i][0]] = 1
     }
-
+    
     return answer
 }
 
-```
+
+let n1 = 9
+let n2 = 4
+let n3 = 7
+
+let wires1 = [[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]
+let wires2 = [[1,2],[2,3],[3,4]]
+let wires3 = [[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]
+
+print(solution(n1, wires1))
+print(solution(n2, wires2))
+print(solution(n3, wires3))
