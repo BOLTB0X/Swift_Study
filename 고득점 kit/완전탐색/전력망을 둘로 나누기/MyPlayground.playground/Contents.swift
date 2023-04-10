@@ -4,7 +4,7 @@ func solution(_ n:Int, _ wires:[[Int]]) -> Int {
     // 개수의 차이 값을 최대한 맞춘다
     // 즉 절대값 중 최솟값을 쓴다는 말
     var answer = Int.max;
-    
+    var visited:[Bool] = Array(repeating: false, count: n+1)
     // 인접행렬 이용
     var adjMat:[[Int]] = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
     
@@ -20,25 +20,47 @@ func solution(_ n:Int, _ wires:[[Int]]) -> Int {
             res += 1
             // 현재 인접행렬의 갯수만큼 ==> 연결되어있는 수만큼
             // 현재 행의 열들의 값이 0이면 미연결 1이면 연결
-            for i in adjMat[cur].enumerated() {
+            for i in 1...n {
                 // 재방문
-                if visited[i.0] {
+                if visited[i] {
                     continue
                 }
                 
                 // 미연결
-                if i.1 == 0 {
+                if adjMat[cur][i] == 0 {
                     continue;
                 }
                 
-                visited[i.0] = true
-                que.append(i.0) // 연결된 노드
+                visited[i] = true
+                que.append(i) // 연결된 노드
             }
             
         }
-        
         return res
     }
+    
+    
+    // MARK: adj식 DFS
+    func DFS(_ visited:[Bool], _ cur:Int, _ depth:Int) -> Int {
+        var depth = depth
+        var visited = visited
+        visited[cur] = true
+        
+        for i in 1...n {
+            if visited[i] {
+                continue;
+            }
+            
+            if adjMat[cur][i] == 0 {
+                continue
+            }
+            
+            depth = DFS(visited, i, depth+1)
+        }
+        
+        return depth
+    }
+
     
     // 인접행렬 연결
     for i in 0..<wires.count {
@@ -56,9 +78,12 @@ func solution(_ n:Int, _ wires:[[Int]]) -> Int {
         adjMat[wires[i][0]][wires[i][1]] = 0
         adjMat[wires[i][1]][wires[i][0]] = 0
         
-        // 끊은 노드로 BFS 탐색
-        let ret1 = BFS(wires[i][0])
-        let ret2 = BFS(wires[i][1])
+//        // 끊은 노드로 BFS 탐색
+//        let ret1 = BFS(wires[i][0])
+//        let ret2 = BFS(wires[i][1])
+        var visited:[Bool] = Array(repeating: false, count: n+1)
+        let ret1 = DFS(visited, wires[i][0],0)
+        let ret2 = DFS(visited, wires[i][1],0)
         
         answer = min(answer, abs(ret1-ret2))
         
@@ -69,7 +94,6 @@ func solution(_ n:Int, _ wires:[[Int]]) -> Int {
     
     return answer
 }
-
 
 let n1 = 9
 let n2 = 4
