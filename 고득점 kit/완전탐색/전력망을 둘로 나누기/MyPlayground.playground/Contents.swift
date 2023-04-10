@@ -4,7 +4,6 @@ func solution(_ n:Int, _ wires:[[Int]]) -> Int {
     // 개수의 차이 값을 최대한 맞춘다
     // 즉 절대값 중 최솟값을 쓴다는 말
     var answer = Int.max;
-    var visited:[Bool] = Array(repeating: false, count: n+1)
     // 인접행렬 이용
     var adjMat:[[Int]] = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
     

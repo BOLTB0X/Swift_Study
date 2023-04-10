@@ -79,13 +79,13 @@ for i in 0..<wires.count {
 
 3. DFS 쓸까 BFS인가
 
-[img]("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2254723E588084F830")
+![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2254723E588084F830)
 <br/>
 
 당연한 말이지만 DFS는 깊이우선, BFS는 너비우선임
 <br/>
 
-[img]("https://grepp-programmers.s3.ap-northeast-2.amazonaws.com/files/production/5b8a0dcd-cba0-47ca-b5e3-d3bafc81f9d6/ex1.png")
+![img](https://grepp-programmers.s3.ap-northeast-2.amazonaws.com/files/production/5b8a0dcd-cba0-47ca-b5e3-d3bafc81f9d6/ex1.png)
 <br/>
 
 여기서 1로 DFS을 쓰면 재귀이던 스택을 쓰더 끊어진 노드를 제외하고 **_1-3-2-4-5-8_** 이런식으로 다 돌기는 할거임

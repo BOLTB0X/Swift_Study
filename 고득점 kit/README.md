@@ -53,6 +53,9 @@
 - [모의고사](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모의고사)
   <br/>
 
+- [전력망을 둘로 나누기](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/전력망을%20둘로%20나누기)
+  <br/>
+
 - [모음사전](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모음%20사전)
   <br/>
 
