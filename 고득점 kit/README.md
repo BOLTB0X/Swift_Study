@@ -10,7 +10,7 @@
 - [폰켓몬](https://github.com/BOLTB0X/Swift_Study/blob/main/고득점%20kit/해시/폰켓몬/README.md)
   <br/>
 
-- [완주하지 못한 선수]()
+- [완주하지 못한 선수](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/해시/완주하지%20못한%20선수)
   <br/>
 
 - [전화번호 목록]()
@@ -43,8 +43,6 @@
 - [H-Index](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/정렬/H-Index)
   <br/>
 
----
-
 ### 완전탐색
 
 - [최소직사가형](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/최소직사각형)
@@ -65,15 +63,9 @@
 - [모음사전](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모음%20사전)
   <br/>
 
----
-
 ### 그리디
 
----
-
 ### 동적계획법(Dynamic Programming)
-
----
 
 ### 깊이/너비 우선 탐색(DFS/BFS)
 
@@ -83,18 +75,12 @@
 - [게임 맵 최단거리](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/DFSBFS/게임%20맵%20최단거리)
   <br/>
 
----
-
 ### 이분탐색
-
----
 
 ### 그래프
 
-- [가장 먼 노드](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모의고사)
+- [가장 먼 노드](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/그래프/가장%20먼%20노드)
   <br/>
 
-- [순위](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/완전탐색/모의고사)
+- [순위](https://github.com/BOLTB0X/Swift_Study/tree/main/고득점%20kit/그래프/순위)
   <br/>
-
----
