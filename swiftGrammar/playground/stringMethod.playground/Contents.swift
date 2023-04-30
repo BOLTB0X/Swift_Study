@@ -41,3 +41,7 @@ if let index = tmpstr.lastIndex(of: "o") {
 let tmp = "Apple"
 print(tmp.contains("A")) // true
 print(tmp.contains("a")) // false
+
+
+let str3:String = "banana"
+print(String(str3[..<str3.index(str3.endIndex)]))
