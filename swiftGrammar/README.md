@@ -19,10 +19,10 @@
 - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/codable.md)
   <br/>
 
-- [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Optional)
+- [Optional](hhttps://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
   <br/>
 
-- [상속(Inheritance)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/InheritanceStudy.playground)
+- [상속(Inheritance)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
   <br/>
 
 - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure01)
