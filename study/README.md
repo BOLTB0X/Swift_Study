@@ -6,13 +6,7 @@
 - [DataObject](https://github.com/BOLTB0X/Swift_Study/tree/main/study/DataObject)
   <br/>
 
-- [상속(Inheritance)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/InheritanceStudy.playground)
-  <br/>
-
 - [LifeCycle](https://github.com/BOLTB0X/Swift_Study/tree/main/study/LifeCycle)
-  <br/>
-
-- [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Optional)
   <br/>
 
 - [MVVM](https://github.com/BOLTB0X/Swift_Study/tree/main/study/mvvmTutorial.playground)

@@ -19,7 +19,13 @@
 - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/codable.md)
   <br/>
 
-- [기본 Closure]()
+- [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Optional)
+  <br/>
+
+- [상속(Inheritance)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/InheritanceStudy.playground)
+  <br/>
+
+- [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure01)
   <br/>
 
 ## 참고

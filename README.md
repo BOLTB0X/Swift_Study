@@ -5,7 +5,7 @@
 
 ## Contents
 
-- [문법](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
+- [Swift Grammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
   <br/>
 
 - [코딩테스트 입문](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩테스트입문)
@@ -14,7 +14,7 @@
 - [코딩 기초 트레이닝]()
   <br/>
 
-- [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
+- [iOS Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
   <br/>
 
 ---
