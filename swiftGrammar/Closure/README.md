@@ -1,4 +1,4 @@
-# 클로저 관련 정의
+# Closure(클로저)
 
 1. [클로저 기본](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure01)
    <br/>

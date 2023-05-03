@@ -25,7 +25,7 @@
 - [상속(Inheritance)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
   <br/>
 
-- [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure01)
+- [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
   <br/>
 
 ## 참고
