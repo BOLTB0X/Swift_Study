@@ -8,3 +8,6 @@
 
 3. [Escaping Closures]()
    <br/>
+
+4. [Closures capture]()
+   <br/>
