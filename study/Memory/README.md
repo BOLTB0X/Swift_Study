@@ -6,8 +6,8 @@
 > <br/>
 > <br/>
 
-| ![image.jpg1](http://www.tcpschool.com/lectures/img_c_memory_structure.png) | ![image.jpg2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24325D4259171CF728) |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![image.jpg1](http://www.tcpschool.com/lectures/img_c_memory_structure.png) | ![image.jpg2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft05ky%2FbtqKqySZfku%2FEp8GYaxIHEw7Jpre4W2ag1%2Fimg.png) |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 <br/>
 
@@ -149,6 +149,30 @@ func addFunc(_ a:Int, _ b:Int) -> Int { // 파라미터는 스택에 할당
   - 지역 변수만 액세스 가능
     <br/>
 
+## 각 영역의 관계
+
+<br/>
+
+1. 힙과 스택
+   데이터의 크기를 정확히 알수 없거나 스택에 할당(저장)하기엔 큰 데이터의 경우엔 힙에 할당
+   <br/>
+
+그 외의 경우는 스택에 할당
+<br/>
+
+**_만약 스택에 많은 data가 할당하게 되면?_** -> [스택 오버플로우]() 참조
+<br/>
+
+2. 메모리 관계
+   같은 메모리를 공유
+   <br/>
+
+힙 영역은 낮은 메모리 주소부터 할당 받는 것이고, 스택 영역은 높은 메모리 주소부터 할당 받는 것임
+<br/>
+
+그러므로 힙 또한 자신의 영역 외로 확장을 계속해서 하게되면 **힙 오버 플로우**라는 것이 발생
+<br/>
+
 ## 참고
 
 http://www.tcpschool.com/c/c_memory_structure
@@ -156,4 +180,6 @@ http://www.tcpschool.com/c/c_memory_structure
 https://babbab2.tistory.com/25
 <br/>
 https://engkimbs.tistory.com/147
+<br/>
+https://junghn.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0-%EC%8A%A4%ED%83%9DStack-%ED%9E%99Heap-%EB%8D%B0%EC%9D%B4%ED%84%B0Data%EC%98%81%EC%97%AD
 <br/>
