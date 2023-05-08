@@ -2,7 +2,7 @@
 
 <br/>
 
-[img](https://cdn.icon-icons.com/icons2/602/PNG/512/Stack_Overflow_icon-icons.com_55812.png)
+![img](https://cdn.icon-icons.com/icons2/602/PNG/512/Stack_Overflow_icon-icons.com_55812.png)
 <br/>
 
 스택에 너무 과도한 메모리를 할당하게 되어 스택 영역을 초과한 경우
@@ -73,10 +73,10 @@ mainFunc()
 위 예제 코드에서 함수 호출에 의한 스택 프레임의 변화를 그림으로 나타내면
 <br/>
 
-[img](http://www.tcpschool.com/lectures/img_c_stackframe_01.png)
+![img](http://www.tcpschool.com/lectures/img_c_stackframe_01.png)
 <br/>
 
-[img](http://www.tcpschool.com/lectures/img_c_stackframe_02.png)
+![img](http://www.tcpschool.com/lectures/img_c_stackframe_02.png)
 <br/>
 
 Step 1. 프로그램이 실행되면, 가장 먼저 main() 함수가 호출되어 main() 함수의 스택 프레임이 스택에 저장
@@ -138,7 +138,7 @@ makeA() // 무한히 호출
 이렇게 스택의 모든 공간을 다 차지하고 난 후 더 이상의 여유 공간이 없을 때 또 다시 스택 프레임을 저장하게 되면, 해당 데이터는 스택 영역을 넘어가서 저장되게 됨
 <br/>
 
-[img](http://www.tcpschool.com/lectures/img_c_stackoverflow.png)
+![img](http://www.tcpschool.com/lectures/img_c_stackoverflow.png)
 <br/>
 
 ## 참고

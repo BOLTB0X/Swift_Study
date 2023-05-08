@@ -31,7 +31,7 @@
 - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
   <br/>
 
-- [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
+- [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC)
   <br/>
 
 ## 참고
