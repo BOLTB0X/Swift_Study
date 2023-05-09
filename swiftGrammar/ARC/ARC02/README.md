@@ -106,7 +106,7 @@ unit4A = nil
 <br/>
 <br/>
 
-이를 해결할 방법은 바로 [weak references]()와 [unowned references]()
+이를 해결할 방법은 바로 [weak references](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC03)와 [unowned references](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)
 <br/>
 
 ## 참고

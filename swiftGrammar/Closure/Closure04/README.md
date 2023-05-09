@@ -48,8 +48,7 @@ func incrementer() -> Int {
 > incrementer 함수에는 매개 변수가 없지만 함수 본문 내에서 runningTotal 및 amount를 참조
 > <br/>
 > 이는 surround 함수로부터 amount와 runningTotal에 대한 참조를 캡처(Cpaturing by reference)하여 자체 함수 body 내에서 사용하여 수행
-> <br/> > **_참조로 캡처(Capturing by reference)하면 makeIncrementer에 대한 호출이 종료 될 때_** > <br/> > **_runningTotal과 amount가 사라지지 않으며 다음에 incrementer 함수가 호출 될 때 runningTotal을 사용할 수 있는 것_** > <br/>
-> <br/>
+> <br/> > **_참조로 캡처(Capturing by reference)하면 makeIncrementer에 대한 호출이 종료 될 때_** > <br/> > **_runningTotal과 amount가 사라지지 않으며 다음에 incrementer 함수가 호출 될 때 runningTotal을 사용할 수 있는 것_** > <br/> > <br/>
 
 아래의 코드로 실행해보면
 <br/>
