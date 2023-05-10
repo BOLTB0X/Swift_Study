@@ -1,6 +1,5 @@
 import UIKit
 
-
 func doFunc() {
     var num: Int = 0
     print("num 확인 #1 = \(num)")

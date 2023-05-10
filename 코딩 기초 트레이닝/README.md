@@ -1,4 +1,4 @@
-# 코딩테스트 입문
+# 코딩 기초 트레이닝
 
 ![img](https://velog.velcdn.com/images/ujone/post/235f511b-7035-4407-9e15-de97b1a7fec0/image.png)
 <br/>
