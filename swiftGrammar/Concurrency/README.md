@@ -73,3 +73,30 @@ func completionHandlerFunction(completion: @escaping (Int?) -> Void) {
    <br/>
 
 ## async, await
+
+> async: 비동기 함수임을 나타내는 키워드
+> <br/>
+> await: async 키워드가 표시된 메소드나 함수의 리턴을 기다린다. 즉, async 함수는 비동기적으로 동작할 수 있고, await 키워드를 사용해 비동기 함수의 결과를 대기할 수 있습니다
+> <br/>
+
+```swift
+// async/await Function
+func asyncAwaitFunction() async -> Int {
+    var cnt: Int = 0
+
+    await withUnsafeContinuation { continuation in
+        DispatchQueue.global().async {
+            // 비동기 작업을 수행하는 부분
+            // 숫자 카운트
+            cnt += 1
+
+            // 비동기 작업이 끝났음을 continuation에 알림
+            continuation.resume(returning: cnt)
+        }
+    }
+
+    return cnt
+}
+```
+
+<br/>
