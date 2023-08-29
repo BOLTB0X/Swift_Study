@@ -16,16 +16,16 @@
 저 강의 2개는 별도의 정리 노션및 문서들이 있어 제가 공부하다 자주 검색해 보았던 것들 위주로 playground와 md파일을 작성할 계획
 <bt/>
 
-- [string](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringMethod.md)
+- [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringMethod.md)
   <br/>
 
 - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/codable.md)
   <br/>
 
-- [Optional](hhttps://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
+- [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
   <br/>
 
-- [상속(Inheritance)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
+- [Inheritance](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
   <br/>
 
 - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
@@ -33,6 +33,8 @@
 
 - [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC)
   <br/>
+
+- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
 
 ## 참고
 
