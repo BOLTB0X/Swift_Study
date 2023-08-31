@@ -1,10 +1,5 @@
 # 옵셔널(Optional)
 
-swift를 하다보면 !이나 ? 보거나 Type에 관한 에러를 많이 보게 됌
-<br/>
-그래서 한 번 정리해보기로 함
-<br/>
-
 ## Optional이란?
 
 > A type that represents either a wrapped value or the absence of a value.
@@ -14,7 +9,8 @@ swift를 하다보면 !이나 ? 보거나 Type에 관한 에러를 많이 보게
 
 값이 있을 수도, 없을 수도 있는 변수
 <br/>
-옵셔널 변수를 사용할거면 뒤에 ?붙여두면 됌
+
+옵셔널 변수를 선할 때 뒤에 **?** 붙여두면 됌
 <br/>
 
 ## Optional 선언
