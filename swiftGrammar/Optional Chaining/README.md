@@ -23,7 +23,7 @@ Optional chaining is a process for querying and calling properties, methods, and
 다중 질의도 함께 chaining 될 수 있으며, 만약 하나라도 nil이라면 전체 chain이 실패
 <br/>
 
-## Optional Chaining as an Alternative to Forced Unwrapping
+## !과 ? 차이: Optional Chaining as an Alternative to Forced Unwrapping
 
 옵셔널이 nil이 아닌 경우 속성, 메소드 또는 서브스크립트를 호출하려는 옵셔널 값 뒤에 물음표(?)를 배치하여 옵셔널 체이닝을 지정할수 있음
 <br/>
@@ -125,6 +125,18 @@ if let roomCount = john.residence?.numberOfRooms {
 John's residence has 1 room(s).으로 출력 됌
 <br/>
 
-## 참고
+## 케이스 별 Optional Chaining
+
+- ['옵셔널 체이닝을 위한 모델 클래스 정의' 보기]()
+
+- ['옵셔널 체이닝을 통해 프로퍼타에 접근' 보기]()
+
+- ['옵셔널 체이닝을 통한 메서드 호출' 보기]()
+
+- ['옵셔널 체이닝을 통한 서브스크립트 접근' 보기]()
+
+- ['옵셔널 타입의 서브스크립트 접근' 보기]()
+
+## 자료 출처
 
 [swift 공식문서 -Optional Chaining-](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/optionalchaining/)

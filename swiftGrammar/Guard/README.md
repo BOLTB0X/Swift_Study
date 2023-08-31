@@ -96,6 +96,6 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 - guard는 종종 초기조건을 검사하고, 이를 만족하지 않으면 빠르게 코드 실행을 종료시키는 데 사용 됌, if let은 더 유연한 방식으로 값을 다루고 가독성 측명에서 좋게 사용이 가능
   <br/>
 
-## 참고
+## 자료 출처
 
 [swift 공식문서 -Early Exit-](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/)
