@@ -127,15 +127,15 @@ John's residence has 1 room(s).으로 출력 됌
 
 ## 케이스 별 Optional Chaining
 
-- ['옵셔널 체이닝을 위한 모델 클래스 정의' 보기]()
+- ['옵셔널 체이닝을 위한 모델 클래스 정의' 보기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Optional%20Chaining/OC_modelCalss.md)
 
-- ['옵셔널 체이닝을 통해 프로퍼타에 접근' 보기]()
+- ['옵셔널 체이닝을 통해 프로퍼타에 접근' 보기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Optional%20Chaining/OC_AccessingPro.md)
 
-- ['옵셔널 체이닝을 통한 메서드 호출' 보기]()
+- ['옵셔널 체이닝을 통한 메서드 호출' 보기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Optional%20Chaining/OC_CallingMethod.md)
 
-- ['옵셔널 체이닝을 통한 서브스크립트 접근' 보기]()
+- ['옵셔널 체이닝을 통한 서브스크립트 접근' 보기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Optional%20Chaining/OC_AccessingSub.md)
 
-- ['옵셔널 타입의 서브스크립트 접근' 보기]()
+- ['옵셔널 타입의 서브스크립트 접근' 보기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Optional%20Chaining/OC_AccessingSub2.md)
 
 ## 자료 출처
 
