@@ -171,7 +171,7 @@ if let i = students4.lastIndex(where: { $0.hasPrefix("A") }) {
 
 ---
 
-## 참고
+## 자료 출처
 
 https://developer.apple.com/documentation/swift/string/lastindex(where:)
 <br/>

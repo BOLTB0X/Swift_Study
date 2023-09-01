@@ -8,10 +8,10 @@
 
 ## Contents
 
-- [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/stringMethod.md)
+- [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)
   <br/>
 
-- [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/playground/codable.md)
+- [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Codable/README.md)
   <br/>
 
 - [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
