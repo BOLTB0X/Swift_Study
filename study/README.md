@@ -1,6 +1,6 @@
 # Study
 
-![img](https://aleahim.com/content/images/size/w2000/2020/11/ios-mac.png)
+![img](https://comcomelectronics.com/wp-content/uploads/2022/08/apple-ios-2.jpg)
 <br/>
 
 ## 계기
