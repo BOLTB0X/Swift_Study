@@ -1,17 +1,20 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/181836
 import Foundation
 
 func solution(_ picture:[String], _ k:Int) -> [String] {
-    var answer:[String] = []
+    var answer: [String] = []
     
-    for i in 0..<picture.count {
-        var tmp = String()
-        for j in picture[i] {
+    for pic in picture {
+        var tempInsertString: String = ""
+        for p in pic {
+            var tempString: String = ""
             for _ in 0..<k {
-                tmp += String(j)
+                tempString.append(p)
             }
+            tempInsertString += tempString
         }
-        for _ in 0..<k {
-            answer.append(tmp)
+        for _ in 0..<k { 
+            answer.append(tempInsertString)
         }
     }
     return answer

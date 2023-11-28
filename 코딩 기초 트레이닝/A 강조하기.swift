@@ -1,3 +1,4 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/181874
 import Foundation
 
 func solution(_ myString:String) -> String {
@@ -9,7 +10,7 @@ func solution(_ myString:String) -> String {
         } else if str != "A" && str.isUppercase {
           answer += str.lowercased()
         } else {
-            answer += String(str) // 문자열로 변환
+            answer.append(str)
         }
     }
     return answer

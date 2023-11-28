@@ -1,15 +1,15 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/181847
 import Foundation
 
 func solution(_ n_str:String) -> String {
-    if n_str.first! != "0" { // 문제 조건 상
-        return n_str
-    } else {
-        var arr = n_str.map{String($0)} // 편의로
-        for i in 1..<arr.count {
-            if arr[i] != "0" { // 0이 아닌거 발견 시 즉시
-                return arr[i..<arr.count].joined() 
-            }
-        }
+    var answer:String = ""
+    var n_str = n_str.map { String($0) }
+    var head:Int = 0
+    
+    while head < n_str.count && n_str[head] == "0" {
+        head += 1
     }
-    return ""
+    
+    answer = n_str[head...].joined()
+    return answer
 }
