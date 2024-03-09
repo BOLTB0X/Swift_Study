@@ -9,25 +9,35 @@
 ## Contents
 
 - [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)
-  <br/>
+  - [문자열 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/stringComm.md)
+  - [삽입](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/insert.md)
+  - [first, last](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/firstlast.md)
+  - [Index](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/Index.md)
+  - [contains](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/contains.md)
+  - [hasPrefix, hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/hasSuffix.md)
+  - [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/allSatisfy.md)
+  - [split](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/split.md)
 
 - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Codable/README.md)
   <br/>
 
 - [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
-  <br/>
-
-- [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
-  <br/>
+  - [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
 
 - [Inheritance](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
   <br/>
 
 - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
-  <br/>
-
+  - [1. 클로저 기본](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure01)
+  - [2. Auto Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure02)
+  - [3. Escaping Closures](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure03)
+  - [4. Closures capture](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure04)
+   
 - [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC)
-  <br/>
+  - [1.ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC01)
+  - [2.Strong Reference Cycles](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC02)
+  - [3.Weak References](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC03)
+  - [4.Unowned References(미소유 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)
 
 - [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
   <br/>
