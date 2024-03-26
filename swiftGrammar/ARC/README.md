@@ -7,18 +7,12 @@
 
 - [메모리 기초](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Memory)
 
-- [StackOverFlow](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Memory)
-
 ## Contents
 
-- [01.ARC란?](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC01)
-  <br/>
+1. [ARC란?](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC01)
 
-- [02.Strong Reference Cycles](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC02)
-  <br/>
+2. [Strong Reference Cycles](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC02)
 
-- [03.Weak References](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC03)
-  <br/>
+3. [Weak References](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC03)
 
-- [04.Unowned References(미소유 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)
-  <br/>
+4. [Unowned References(미소유 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)

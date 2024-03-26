@@ -7,17 +7,21 @@
 
 ## Contents
 
-- [Swift Grammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
+- [Grammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
 
   - [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)
 
-  - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Codable/README.md)
+  - [Struct & Class](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Strcut%20%26%20Class)
 
   - [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
 
   - [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
 
   - [Inheritance](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
+
+  - [Protocol](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Protocol)
+
+  - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Codable/README.md)
 
   - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
 
