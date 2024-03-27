@@ -1,7 +1,6 @@
 # String
 
 > C언어 만큼이나 swift는 문자열을 다루기가 까다롭다
-> <br/>
 
 ## Intro
 
@@ -50,43 +49,24 @@ for i in 0..<5 {
 
 ## 목록
 
-1. 기본
+1. [String - 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/stringComm.md)
 
-- [문자열 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/stringComm.md)
-  <br/>
+2. [String - append, insert, replace, remove](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/insert.md)
 
-- [삽입](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/insert.md)
-  <br/>
+3. [String - first, last](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/firstlast.md)
 
-2. 인덱스 관련
+4. [String - Index](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/Index.md)
 
-- [first, last](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/firstlast.md)
-  <br/>
+5. [String - contains](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/contains.md)
 
-- [Index](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/Index.md)
-  <br/>
+6. [String - hasPrefix, hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/hasSuffix.md)
 
-3. Bool형 반환
+7. [String - allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/allSatisfy.md)
 
-- [contains](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/contains.md)
-  <br/>
-
-- [hasPrefix, hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/hasSuffix.md)
-  <br/>
-
-- [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/allSatisfy.md)
-  <br/>
-
-4. 기타
-
-- [split](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/split.md)
-  <br/>
-
-- [배열을 문자열로](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/stringApply.md)
+8. [String - String 쪼개기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/split.md)
 
 ## 자료 출처
 
 [애플 개발자 공식문서 -String-](https://developer.apple.com/documentation/swift/string)
-<br/>
 
 [swift 공식문서 -Strings and Characters-](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters/)

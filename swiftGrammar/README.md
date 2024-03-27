@@ -3,21 +3,28 @@
 ![img1](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjW4Vw%2FbtrsSulLNL2%2FFFkNDkfgjLPLiZSBK4CHbK%2Fimg.png)
 <br/>
 
-> 스위프트 문법 특성상 PS나 개발을 진행할때 옵셔널이나 for문 관련 등 자주 인터넷검색을 하게 됌 그래서 내가 직접 정리해보고자 작성하게 됌
-> <br/>
+> 스위프트 문법 특성상 PS나 개발을 진행할때 옵셔널이나 for문 관련 등 자주 인터넷 검색을 하게 됌
+> 그래서 내가 직접 정리해보고자 작성
 
 ## Contents
 
 - [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)
 
-  1. [문자열 기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/stringComm.md)
-  2. [삽입](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/insert.md)
+  1. [기본](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/stringComm.md)
+
+  2. [append, insert, replace, remove](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/insert.md)
+
   3. [first, last](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/firstlast.md)
+
   4. [Index](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/Index.md)
+
   5. [contains](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/contains.md)
+
   6. [hasPrefix, hasSuffix](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/hasSuffix.md)
+
   7. [allSatisfy](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/allSatisfy.md)
-  8. [split](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/split.md)
+
+  8. [String 쪼개기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/split.md)
 
 - [Struct & Class](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Strcut%20%26%20Class)
 
@@ -48,6 +55,8 @@
 - [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
 
 - [if let VS guard](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
+
+- [High Order Function(고차함수)]()
 
 ## 참고
 
