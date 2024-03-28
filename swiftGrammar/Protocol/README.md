@@ -107,9 +107,31 @@ lightSwitch.toggle()
 
 - Delegation
 
-  Delegation 말 그대로 ‘위임자’, 프로토콜를 공부해보면 틀만 설계해 놓고 사용자가 사용할 때 세부사항을 코딩하므로 즉 ‘너가 알아서 해라’ 라는 느낌이 강했음.
+  Delegation 말 그대로 ‘위임자’, 프로토콜를 공부해보면 틀만 설계해 놓고 사용자가 사용할 때 세부사항을 코딩하므로 즉 ‘너가 알아서 해라’ 라는 느낌
 
-  Delegation 패턴은 주로 프로토콜(또는 인터페이스)을 사용하여 다른 객체에 어떤 기능을 위임하거나 대리 수행하도록 하는 디자인 패턴.(ex. UITableView, UICollectionView)
+  주로 프로토콜(또는 인터페이스)을 사용하여 다른 객체에 어떤 기능을 위임하거나 대리 수행하도록 하는 디자인 패턴.(ex. UITableView, UICollectionView)
+
+### Inheritance(상속)과 차이
+
+1. 관계
+
+   > Inheritance(상속) 은 주로 걔층구조 형성
+
+   Protocol 은 Class , Strcut , Enum 등 다양한 관계 형성 가능
+   <br/>
+
+2. 다중
+
+   > Swift에선 Inheritance(상속) 은 단일 상속만 가능
+
+   Protocol은 다중 채택이 가능
+   <br/>
+
+3. 확장성
+
+   > Inheritance(상속)은 자식 Class에서 Override 가능 (확장 수정)
+
+   Protocol은 요구사항만 정의 , 수정 과 확장 X
 
 ## 참고
 
