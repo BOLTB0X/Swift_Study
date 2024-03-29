@@ -1,10 +1,8 @@
 # Codable
 
 > A type that can convert itself into and out of an external representation.
-> <br/>
 
 자기 자신을 변환하거나 외부 표현으로 변할 수 있는 타입 -> 인코딩 및 디코딩을 위한 키로 사용할 수 있는 타입
-<br/>
 
 ```swift
 struct Human: Codable {
@@ -16,10 +14,8 @@ struct Human: Codable {
 ## Encodable
 
 > A type that can encode itself to an external representation
-> <br/>
 
 자기 자신을 외부 표현(such as JSON)으로 변환
-<br/>
 
 ```swift
 // encoder선언
@@ -40,10 +36,8 @@ if let jsonData = jsonData, let jsonString = String(data: jsonData, encoding: .u
 ## Decodable
 
 > A type that can decode itstelf from an external representation
-> <br/>
 
 외부표현(such as JSON)을 자기 자신으로 변환
-<br/>
 
 ```swift
 // decoder 생성
@@ -62,8 +56,7 @@ if let data = data, let human = try? decoder.decode(Dinner.self, from: data) {
 
 ## 자료출처
 
-[애플 개발자 공식문서 -codable-](https://developer.apple.com/documentation/swift/codable)
+[공식문서 - codable](https://developer.apple.com/documentation/swift/codable)
 <br/>
 
-[상어의 개발블로그](https://shark-sea.kr/entry/Swift-Codable-알아보기)
-<br/>
+[블로그 참조](https://shark-sea.kr/entry/Swift-Codable-알아보기)

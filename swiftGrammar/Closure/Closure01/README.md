@@ -1,101 +1,104 @@
-# 클로저 (Closure)
+# Closure (클로저)
 
 > Group code that executes together, without creating a named function.
-> <br/>
-> 클로저 표현식은 간결하고 집중된 구문으로 인라인 클로저를 작성하는 방법, 클로저 표현식은 명확성이나 의도를 잃지 않고 짧은 형식으로 클로저를 작성하기 위한 몇 가지 구문 최적화를 제공
-> <br/>
 
-**_보통은 익명함수라 함_**
-<br/>
+Closure 표현식은 간결하고 집중된 구문으로 인라인 클로저를 작성하는 방법
 
 ```swift
 // 노익명함수
 func Hello() {
     print("Hello Closure")
 }
-```
 
-<br/>
-
-```swift
 // 익명함수
 let Hello = { print("Hello Closure") }
+// 일반적인 Closure 라고 하면 Unnamed Closure
 ```
 
-그러므로 Closure라고 하면 Unnamed Closure라고도 함
-<br/>
+즉 Nested functions 을 좀 더 간결하고 유용하게 표현하는 것이 **Closure**
 
-## 표현식
+## Closure Expression
 
-```swift
-{ Parametor -> Return Type in // 클로저 헤드
-    code // 클로저 바디
+```
+{ (<#parameters#>) -> <#return type#> in
+   <#statements#>
 }
 ```
 
-- func 키워드 작성 X
-  <br/>
+- Expression Syntaxin page link
 
-- 클로저 헤드
-  <br/>
+  ```swift
+  { Parametor -> Return Type in // 클로저 head
+      code // 클로저 body
+  }
+  ```
 
-- 클로저 바디
-  <br/>
+- 파라미터와 리턴 값 존재 X
 
-- in을 통해 구분
-  <br/>
+  ```swift
+  let Hello = { () -> () in
+      print("Hello Closure")
+  }
 
-## 클로저의 여러 형태
+  Hello() // Hello Closure
+  ```
 
-<br/>
+- 파라미터와 리턴 값 존재 O
 
-#### 파라미터와 리턴 값 존재 X
+  ```swift
+  let Hello = { (name: String) -> String in
+      print("Hello Closure + \( ame)")
+  }
 
-```swift
-let Hello = { () -> () in
-    print("Hello Closure")
-}
+  Hello("haha") // Hello Closure haha
+  ```
 
-Hello() // Hello Closure
-```
+## Inferring Type(추론 타입)
 
-<br/>
+> The sorted(by:) method is being called on an array of strings, so its argument must be a function of type (String, String) -> Bool.
+> This means that the (String, String) and Bool types don’t need to be written as part of the closure expression’s definition.
 
-#### 파라미터와 리턴 값 존재 O
+특정 경우에는 Closure의 매개변수 유형과 반환 Type을 컴파일러가 유추할 수 있음
 
-```swift
-let Hello = { (name: String) -> String in
-    print("Hello Closure + \( ame)")
-}
+그러므로 괄호 및 반환 화살표를 생략이 가능
 
-Hello("haha") // Hello Closure haha
-```
+- 일반 표현
 
-<br/>
+  ```swift
+  reversedNames = names.sorted(by: { s1, s2 in return s1 > s2
+  ```
 
-## 트레일링 클로저(Trailing Closure)
+- Single-expression closures(단일 표현식)
 
-함수의 마지막 파라미터가 클로저일 때, 이를 파라미터 값 형식이 아닌 함수 뒤에 붙여 작성된 클로저(Argument Label은 생략)
-<br/>
+  ```swift
+  reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
+  ```
 
-#### 클로저를 파라미터로
+- argument
+  ```swift
+  // Swift는 $0, $1, $2 등의 이름으로 클로저 argument 값을 참조하는 데 사용
+  reversedNames = names.sorted(by: { $0 > $1 } )
+  ```
 
-```swift
-func HelloFunc(closure: () -> ()) {
-    closure()
-}
+## Trailing Closure(후행 클로저)
 
-HelloFunc(closure: { () -> () in
-    print("Hello Closure")
-})
-```
+메서드의 마지막 파라미터가 Closure일 때, 이를 파라미터 값 형식이 아닌 메서드 뒤에 붙여 작성된 Closure(Argument Label은 생략 가능)
 
-<br/>
+- Closure를 파라미터 처럼 사용
 
-즉 이 코드는 함수의 파라미터에 클로저를 전달 받아 함수가 호출 될 시, 클로처가 실행
-<br/>
+  ```swift
+  func HelloFunc(closure: () -> ()) {
+      closure()
+  }
 
-#### return Type에 클로저
+  HelloFunc(closure: { () -> () in
+      print("Hello Closure")
+  })
+  ```
+
+즉 이 코드는 함수의 파라미터에 Closure를 전달 받아 함수가 호출 될 시, Closure가 실행
+
+#### return Type -> Closure
 
 ```swift
 func HelloFunc() -> () -> () {
@@ -107,12 +110,9 @@ func HelloFunc() -> () -> () {
 HelloFunc()() // Hello Closure
 ```
 
-<br/>
-
 이런식 후행 클로저 사용
-<br/>
 
-#### 파라미터가 여러 개인 클로저
+#### 여러 Closure in 파라미터
 
 ```swift
 func fetch(success:() -> (), fail: -> () -> ()) {
@@ -126,46 +126,12 @@ fetch(success: { () -> () in
 })
 ```
 
-<br/>
-
-주로 API 호출하거나 Combine 등에서 자주보는 형태
-<br/>
-
-## 축약한 형태
-
-```swift
-func sumFunc(closure: (Int, Int, Int) -> Int) {
-    closure(1,2,3)
-}
-
-sumFunc(closure: {(a, b, c) in
-    return a+b+c
-})
-
-sumFunc(closure: {
-    return $0+$1+$2
-})
-
-sumFunc(closure: {
-    $0+$1+$2
-})
-
-sumFunc() {
-    $0+$1+$2
-}
-
-sumFunc {
-    $0+$1+$2
-}
-```
-
--
+주로 REST API 호출하거나 Combine 등에서 자주 보는 형태
 
 ## 참고
 
-https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/
-<br/>
-https://didu-story.tistory.com/173
-<br/>
-https://babbab2.tistory.com/81
-<br/>
+[공식문서 - Closures](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/)
+
+[블로그 참조 - 1](https://didu-story.tistory.com/173)
+
+[블로그 참조 - 2](https://babbab2.tistory.com/81)
