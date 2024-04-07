@@ -78,7 +78,7 @@ mainFunc()
 
 이러한 방식을 후입선출(LIFO, Last-In First-Out), stack은 push 동작으로 data를 저장하고, pop 동작으로 data 를 인출
 
-## 스택 오버플로우(stack overflow)
+## stack overflow
 
 > 선입후출 특성 때문에 무한이란 문제가 생김
 

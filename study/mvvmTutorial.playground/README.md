@@ -1,18 +1,12 @@
 # MVVM
 
-## MVVM이란?
-
-MVVM(Model-View-ViewModel)은 개체를 세 개의 개별 그룹으로 구분하는 구조적 디자인 패턴
-<br/>
+> MVVM(Model-View-ViewModel)은 개체를 세 개의 개별 그룹으로 구분하는 구조적 디자인 패턴
 
 ## Model
 
-Models은 application data 를 보유 및 관리(hold)
-<br/>
-그냥 일반적으로 구조체(struct), 클래스(class)
-<br/>
+> Models은 application data 를 보유 및 관리(hold)
 
-ex)
+그냥 일반적으로 구조체(struct), 클래스(class)
 
 ```swift
 public class Pet {
@@ -42,19 +36,15 @@ public class Pet {
 
 ## Views
 
-view는 말 그대로 나타내는 구조, 시각적 요소와 컨트롤을 화면에 표시
-<br/>
+> view는 말 그대로 나타내는 구조, 시각적 요소와 컨트롤을 화면에 표시
+
 일반적으로 UIView의 하위 클래스
-<br/>
 
 ## ViewModels
 
-Model data를 View에 나타내는 값으로 변환
-<br/>
-일반적으로 클래스이므로 주로 참조로 전달
-<br/>
+> Model data를 View에 나타내는 값으로 변환
 
-ex)
+일반적으로 클래스이므로 주로 참조로 전달
 
 ```swift
 public class PetViewModel {
@@ -114,28 +104,23 @@ public class PetViewModel {
 ## MVC와 MVVM의 차이
 
 일반적으로 MVC 패턴과 매우 유사하면서도 다름, MVVM에서 VM이 뷰 컨트롤러가 포함되어져있음
-<br/>
+
 즉 MVVM 패턴에 존재는 하지만 뷰 컨트롤러의 역할이 최소화되어있다 생각하면 됌
-<br/>
 
 ## 그럼 MVVM을 왜 쓸까?
 
-<em> MVVM 패턴은 MVC 패턴에서 ViewController의 큰 역할로 인해 규모가 커지는 것을 보완이 가능 함
-<br/>
+> MVVM 패턴은 MVC 패턴에서 ViewController의 큰 역할로 인해 규모가 커지는 것을 보완이 가능 함
 
-ViewModel이 없는 MVC 패턴에서 View 컨트롤러에 Model에서 view로 변환 코드를 넣어줄 것임 하지만 viewDidLoad 및 기타 뷰 수명 주기 이벤트 처리, IBActions 및 기타 여러 작업을 통해 뷰 콜백 처리 등 이미 다양한 역할을 하고 있으므로 너무 ViewController에 역할이 너무 비대해지는 것
-<br/>
+ViewModel이 없는 MVC 패턴에서 View 컨트롤러에 Model에서 view로 변환 코드를 넣어줄 것임
+
+하지만 viewDidLoad 및 기타 뷰 수명 주기 이벤트 처리, IBActions 및 기타 여러 작업을 통해 뷰 콜백 처리 등 이미 다양한 역할을 하고 있으므로 너무 ViewController에 역할이 너무 비대해지는 것
 
 그러므로 MVVM 패턴을 이용하면 Model간의 변환이 VM이 담당하게 됌
-<br/>
 
 모델을 뷰에 대한 다른 표현으로 변환해야 하는 경우 이 패턴을 사용
-<br/>
 
 > ex) 뷰 모델을 사용하여 날짜를 날짜 형식의 문자열로 변환
 > 십진수를 통화 형식의 문자열로 변환
-
----
 
 ## 참고 주소
 
