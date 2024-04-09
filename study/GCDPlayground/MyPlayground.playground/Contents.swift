@@ -224,3 +224,10 @@ for item in 90...100 {
 //Async (2) : 38
 //Async (2) : 39
 //Async (2) : 40
+
+// 사용자 지정 큐
+let concurrentQueue = DispatchQueue.init(label: "myQueue", qos: .background, attributes: .concurrent)
+concurrentQueue.async {
+    // task
+}
+
