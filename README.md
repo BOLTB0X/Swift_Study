@@ -1,7 +1,6 @@
 # Swift_Study
 
 ![img](https://mblogthumb-phinf.pstatic.net/MjAxODExMDFfMTcw/MDAxNTQxMDQyMDg4MjQ0.B0N974qP_FCEw6Hj28xDjRYXTHU6R7M7pEpvsRKhqlAg.zaTEhwKDfmQql81e44pyBapnlvdO38GdJHME-V_fQkAg.GIF.yellowouk2/1540993661620.GIF?type=w800)
-<br/>
 
 **Swift** 라는 언어 기본 다지기 및 연습문제 풀이
 
@@ -33,8 +32,6 @@
 
   - [High Order Function(고차함수)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/High%20Order%20Function)
 
-    <br/>
-
 - [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
 
   - [Data object](https://github.com/BOLTB0X/Swift_Study/tree/main/study/DataObject)
@@ -46,11 +43,9 @@
   - [Singleton](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Singleton)
 
   - [Memory structure](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Memory)
-    <br/>
 
 - [기초 문제 1 - 코딩테스트 입문(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩테스트입문)
 
 - [기초 문제 2 - 코딩 기초 트레이닝(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩%20기초%20트레이닝)
-  <br/>
 
 ---
