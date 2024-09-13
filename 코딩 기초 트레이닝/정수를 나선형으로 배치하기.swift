@@ -1,48 +1,27 @@
 import Foundation
 
-func solution(_ n:Int) -> [[Int]] {
-    var answer:[[Int]] = Array(repeating: Array(repeating: 0, count: n), count: n)
-    var dir = 0 // 방향
-    var cy = 0
-    var cx = 0
-    var number = 1
-    
-    // 모든 정수 값을 배열에 채우면 종료
-    while (number <= n * n) { 
-        answer[cx][cy] = number
-        number += 1
+let dir = [[0, 1], [1, 0], [0, -1], [-1, 0]]
 
-        // 오른쪽 방향으로 이동
-        if dir == 0 {
-            if cy == n - 1 || answer[cx][cy + 1] != 0 {
-                dir = 1
-                cx += 1
-            } else {
-                cy += 1
-            }
-        } else if dir == 1 { // 아래쪽 방향으로 이동
-            if cx == n - 1 || answer[cx + 1][cy] != 0 {
-                dir = 2
-                cy -= 1
-            } else {
-                cx += 1
-            }
-        } else if dir == 2 { // 왼쪽 방향으로 이동
-            if cy == 0 || answer[cx][cy - 1] != 0 {
-                dir = 3
-                cx -= 1
-            } else {
-                cy -= 1
-            }
-        } else if dir == 3 { // 위쪽 방향으로 이동
-            if cx == 0 || answer[cx - 1][cy] != 0 {
-                dir = 0
-                cy += 1
-            } else {
-                cx -= 1
-            }
-        }
-    }
+func solution(_ n:Int) -> [[Int]] {
+    var answer: [[Int]] = Array(repeating: Array(repeating: 0, count: n), count: n)
+    var x = 0, y = 0, d = 0, number = 1
     
+    for _ in 0..<(n*n) {
+        answer[x][y] = number
+        number += 1
+        
+        let nx = x + dir[d][0]
+        let ny = y + dir[d][1]
+        
+        if nx < 0 || ny < 0 || nx >= n || ny >= n || answer[nx][ny] != 0 {
+            d = (d + 1) % 4
+            x += dir[d][0]
+            y += dir[d][1]
+            continue
+        }
+        
+        x = nx 
+        y = ny
+    }
     return answer
 }

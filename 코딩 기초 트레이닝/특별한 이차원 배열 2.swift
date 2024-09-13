@@ -1,8 +1,8 @@
 import Foundation
 
 func solution(_ arr:[[Int]]) -> Int {
-    for i in 0..<arr.count {
-        for j in 0..<arr[0].count {
+    for i in arr.indices {
+        for j in arr[i].indices {
             if arr[i][j] != arr[j][i] {
                 return 0
             }
