@@ -13,19 +13,19 @@ Swift에서 함수는 일급 객체이므로 함수를 다루는 것이 가능�
 
 ## 목차
 
-- [map]()
+- [map](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/map.md)
 
-- [filter]()
+- [filter](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/filter.md)
 
-- [reduce]()
+- [reduce](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/reduce.md)
 
-- [sorted]()
+- [sorted](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/sorted.md)
 
-- [forEach]()
+- [forEach](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/forEach.md)
 
-- [compactMap]()
+- [compactMap](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/compactMap.md)
 
-- [flatMap]()
+- [flatMap](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/flatMap.md)
 
 ## 참고
 
