@@ -1,5 +1,3 @@
-## 참고
-
 ## filter (\_ : )
 
 > Returns a new set containing the elements of the set that satisfy the given predicate.
