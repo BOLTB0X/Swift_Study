@@ -16,7 +16,9 @@
 
   - [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
 
-  - [Inheritance](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
+  - [Inheritance - basic](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
+
+  - [Inheritance - property Overriding]()
 
   - [Protocol](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Protocol)
 
@@ -28,9 +30,11 @@
 
   - [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
 
-  - [if let VS guard](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
-
   - [High Order Function(고차함수)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/High%20Order%20Function)
+
+  - [split](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/split.md)
+
+  - [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
     <br/>
 
 - [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
@@ -56,6 +60,9 @@
   - [Main Thread & Global Thread](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Main%20Thread%20%26%20Global%20Thread)
 
   - [joined을 사용하여 Array -> String, 에러의 이유는?](https://github.com/BOLTB0X/Swift_Study/tree/main/study/String-And-Array)
+
+  - [if let VS guard 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
+  - [split vs components 차이]()
     <br/>
 
 - [기초 문제 1 - 코딩테스트 입문(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩테스트입문)
