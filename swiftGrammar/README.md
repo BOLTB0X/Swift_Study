@@ -58,6 +58,26 @@
 
 - [High Order Function(고차함수)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/High%20Order%20Function)
 
+  - [map](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/map.md)
+
+  - [filter](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/filter.md)
+
+  - [reduce](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/reduce.md)
+
+  - [sorted](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/sorted.md)
+
+  - [forEach](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/forEach.md)
+
+  - [compactMap](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/compactMap.md)
+
+  - [flatMap](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/flatMap.md)
+
+- [split](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/split.md)
+
+- [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
+
+- [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
+
 ## 참고
 
 - [스위프트 공식문서](https://www.swift.org/documentation/)

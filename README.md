@@ -35,6 +35,8 @@
   - [split](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/split.md)
 
   - [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
+
+  - [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
     <br/>
 
 - [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
