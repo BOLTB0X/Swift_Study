@@ -37,7 +37,11 @@
   - [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
 
   - [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
+
+  - [KVC-KVO]()
     <br/>
+
+---
 
 - [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
 
@@ -64,11 +68,12 @@
   - [joined을 사용하여 Array -> String, 에러의 이유는?](https://github.com/BOLTB0X/Swift_Study/tree/main/study/String-And-Array)
 
   - [if let VS guard 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
+
   - [split vs components 차이]()
     <br/>
+
+---
 
 - [기초 문제 1 - 코딩테스트 입문(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩테스트입문)
 
 - [기초 문제 2 - 코딩 기초 트레이닝(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩%20기초%20트레이닝)
-
----

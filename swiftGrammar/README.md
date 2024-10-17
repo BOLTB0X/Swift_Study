@@ -3,9 +3,6 @@
 ![img1](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjW4Vw%2FbtrsSulLNL2%2FFFkNDkfgjLPLiZSBK4CHbK%2Fimg.png)
 <br/>
 
-> 스위프트 문법 특성상 PS나 개발을 진행할때 옵셔널이나 for문 관련 등 자주 인터넷 검색을 하게 됌
-> 그래서 내가 직접 정리해보고자 작성
-
 ## Contents
 
 - [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)

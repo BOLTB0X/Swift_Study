@@ -1,11 +1,6 @@
 # Study
 
-![img](https://comcomelectronics.com/wp-content/uploads/2022/08/apple-ios-2.jpg)
-<br/>
-
-## 계기
-
-개발과정에서 자주보거나 중요하다고 느낀 것들은 꼭 내 스스로 정리해볼 필요성을 느껴 나만의 연습장같은 느낌
+![img](https://upload3.inven.co.kr/upload/2020/04/25/bbs/i014728605617.gif)
 <br/>
 
 ## Contents
