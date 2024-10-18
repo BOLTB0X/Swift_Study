@@ -2,8 +2,6 @@
 
 > 객체의 프로퍼티에 간접적으로 접근하거나, 변화를 감지할 수 있는 기능을 제공
 
-<br/>
-
 ## KVC(Key-Value Coding)
 
 > 객체의 프로퍼티에 대해 key를 통해 간접적으로 접근할 수 있게 해주는 메커니즘
@@ -107,8 +105,18 @@ print(human.name)
 // Optional("B0X")
 ```
 
-ame이 변경될때마다 특정 작업을 수행하기 위해서 name을 observing하려면, observe(\_:options:changeHandler)를 정의
+name이 변경될때마다 특정 작업을 수행하기 위해서 name을 observing하려면, observe(\_:options:changeHandler)를 정의
 <br/>
+
+## KVO와 willSet, didSet의 차이
+
+- KVO는 특정한 프로퍼티의 변화를 런타임에 동적으로 관찰하며, 해당 프로퍼티의 변화를 감지하고 반응
+  보통 UIKit 및 Objective-C와의 상호작용에서 사용
+  <br/>
+
+- willSet, didSet은 Swift의 프로퍼티 옵저버로, 프로퍼티의 값을 설정할 때 자동으로 호출
+  이 옵저버는 KVO와 달리 외부에서 관찰할 수 없으며, 해당 클래스 내부에서만 동작
+  <br/>
 
 ## 참고
 
