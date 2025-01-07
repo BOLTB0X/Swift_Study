@@ -69,7 +69,7 @@
 
   - [if let VS guard 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
 
-  - [split vs components 차이]()
+  - [split vs components 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/README.md)
     <br/>
 
 ---
