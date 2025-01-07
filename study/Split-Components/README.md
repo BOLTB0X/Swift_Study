@@ -1,6 +1,6 @@
 # split vs components
 
-[split](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/split.md)은 빈 문자열을 무시, [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)는 빈 문자열도 처리해야 하거나, 문자열을 새로 복사해야 할 때 사용
+[split](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/split-Components/split.md)은 빈 문자열을 무시, [components](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/split-Components/components.md)는 빈 문자열도 처리해야 하거나, 문자열을 새로 복사해야 할 때 사용
 
 ## Return Value
 
