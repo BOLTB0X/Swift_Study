@@ -31,7 +31,7 @@
 
 - [Inheritance - basic](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
 
-- [Inheritance - property Overriding]()
+- [Inheritance - property Overriding](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Propery%20Overriding/README.md)
 
 - [Protocol](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Protocol)
 
@@ -74,6 +74,8 @@
 - [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
 
 - [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
+
+- [KVC-KVO](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/KVC-KVO)
 
 ## 참고
 

@@ -85,8 +85,11 @@ final class Human {
     print(“iOS입니다”)
     }
     }
+
     ```
     <br/>
+
+    ```
 
   - Coder 클래스는 Human 슈퍼클래스의 description 메소드를 오버라이딩(재정의)
     <br/>
@@ -107,7 +110,7 @@ final class Human {
 
     <br/>
 
-  - [Property Overriding]()
+  - [Property Overriding](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Propery%20Overriding/README.md)
 
 ## 참조
 
