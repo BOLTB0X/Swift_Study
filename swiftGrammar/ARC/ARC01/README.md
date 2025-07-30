@@ -1,46 +1,90 @@
 # ARC(Automatic Reference Counting)
 
-> Swift는 ARC(Automatic Reference Counting)를 사용하여 앱의 메모리 사용량을 추적하고 관리
-> ARC는 해당 인스턴스가 더 이상 필요하지 않을 때 클래스 인스턴스에서 사용하는 메모리를 자동으로 해제
-> Swift에서 ARC를 사용하는 것은 Objective-C에서 ARC를 사용하기 위한 ARC 릴리스 정보로 전환에 설명된 접근 방식과 매우 유사
-> 참조 횟수는 클래스의 인스턴스에만 적용 됨. 구조 및 열거형은 참조 유형이 아닌 값 유형이며 참조로 저장 및 전달되지 안흥ㅁ
+> *Swift* 는 **ARC(Automatic Reference Counting)** 를 사용하여 앱의 메모리 사용량을 추적하고 관리
 
-Swift(UIKit 환경)에선 주로 메모리 구조 중 힙(Heap)을 주로 다루게 됨
-<br/>
+> *ARC* 는 해당 인스턴스가 더 이상 필요하지 않을 때 클래스 인스턴스에서 사용하는 메모리를 자동으로 해제
 
-ARC가 메모리 영역 중 힙 영역을 관리하게 됌
-<br/>
+- *Swift(UIKit 환경)* 에선 주로 메모리 구조 중 **힙(Heap)** 을 주로 다루게 됨
 
-## ARC를 왜 쓸까
+- **ARC** 가 메모리 영역 중 힙 영역을 관리하게 됌
 
-swift에서는 클래스의 새 인스턴스를 만들 때마다 ARC는 해당 인스턴스에 대한 정보를 저장하기 위해 메모리를 할당함
+---
 
-인스턴스를 더 이상 필요하지 않으면 ARC는 해당 인스턴스에서 사용하는 메모리를 해제하여 메모리를 다른 용도로 대신 사용 가능
+## Intro
 
-이렇게 하면 클래스 인스턴스가 더 이상 필요하지 않을 때 메모리 공간을 차지하지 X -> **메모리 해제**
+- `struct`, `enum` 은 Value 타입 : **스택(Stack)** 에 저장
 
-즉 코드를 작성하는 과정에서 직접 힙에 대한 것을 하지 않아도 알아서 힙에서 할당되고 있었다는 것
+- `class` 는 Reference 타입 : **힙(Heap)** 에 저장, 참조 카운트 기반 메모리 관리 필요
 
-**_그러나 ARC가 아직 사용 중인 인스턴스의 할당을 해제하면 더 이상 해당 인스턴스의 속성에 액세스하거나 해당 인스턴스의 메서드를 호출이 불가능_**
+    ```swift
+    var a: Person? = Person()
+    var b = a  // 참조 카운트 +1
+    a = nil    // 참조 카운트 -1 (b가 여전히 참조 중)
+    b = nil    // 참조 카운트 -> → ARC가 메모리 해제
+    ```
 
-실제로 인스턴스에 액세스하려고 하면 App이 충돌할 가능성이 커지는 문제가 생김
+---
 
-> 인스턴스가 여전히 필요한 동안 사라지지 않도록 ARC는 현재 각 클래스 인스턴스를 참조하는 속성, 상수 및 변수의 수를 추적
-> ARC는 해당 인스턴스에 대한 활성 참조가 하나 이상 존재하는 한 인스턴스 할당을 취소 X
+## ARC를 사용해야하는 이유
 
-그렇기 때문에 ARC를 다룰 줄 알아야함
+> **ARC** 는 **"자동"** 이지만 완전한 **"알아서 다 해주는 것"** 은 아님
 
-## Automatic Reference Counting 작동과 Heap
+- *Swift* 는 자동으로 메모리를 관리하지만,
+
+- 참조 사이클을 개발자가 설계 단계에서 조심하지 않으면 **메모리 누수** 가 발생함
+
+   ```swift
+   // 서로 Strong(추후에 나옴)
+   class A {
+      var b: B?
+   }
+
+   class B {
+      weak var a: A?
+   }
+   ```
+
+- 그렇기 때문에 ARC를 다룰 줄 알아야함
+
+---
+
+## GC vs RC
+
+> *Swift* 의 **ARC** 가 **RC(Reference Counting)** 기반으로 동작하며,
+
+> **GC(Garbage Collection)** 와 다르게 컴파일 타임에 **retain**/**release** 를 관리하므로
+
+> 예측 가능하고 효율적이지만, 순환 참조 문제는 개발자가 해결해야 함
+
+> 힙 영역의 메모리를 관리하는 방법은 GC와 RC가 존재
+
+- *GC (Garbage Collection)* : **java** 처럼 런타임에 주기적으로 메모리를 검사해서 더 이상 참조되지 않는 객체를 제거
+
+- *RC (Reference Counting)* : 객체가 참조될 때 카운트를 증가시키고, 참조가 해제될 때 감소 -> `0` 이 되면 메모리 해제
+
+**Swift는 GC가 아닌 RC 기반, 정확히는 ARC를 사용**
+
+---
+
+## retain / release
+
+**ARC** 은 런타임이 아닌 컴파일 타임에 **Reference Counting** 관리 코드를 삽입
 
 ```swift
-// name이라는 저장된 constant property 정의하는 Person이라는 간단한 클래스로 시작
+var a = Person()  // ARC가 retain 삽입
+a = nil           // ARC가 release 삽입
+```
+
+---
+
+## Automatic Reference Counting(자동 참조 카운트) 과 Heap
+
+```swift
 class Person {
     let name: String
 
-    // MARK: - 1. initializer
-    init(name: String) {
+    init(name: String) { // 1
         self.name = name
-        // 초기화를 나타내는 부분
         print("\(name) is being initialized")
     }
     deinit {
@@ -48,65 +92,106 @@ class Person {
     }
 }
 
-// 선택적 유형이므로 자동으로 nil 값으로 초기화되며 현재 Person 인스턴스를 참조 X
+// 2
 var reference1: Person?
 
-// MARK: -2.
-// referencel 는 스택영역에 할당
-// Person은 힙영역에 할당
+// 3
 reference1 = Person(name: "John Appleseed") // John Appleseed is being initialized
-```
 
-Person 클래스의 이니셜라이저를 호출하는 지점에 "John Appleseed is being initialized"라는 메시지가 출력됨
-
-새 Person 인스턴스가 reference1 변수에 할당되었으므로 이제 reference1에서 새 Person 인스턴스에 Strong 참조가 생김
-
-적어도 하나의 강력한 참조가 있기 때문에 ARC는 이 Person이 메모리에 유지되고 할당이 취소되지 않게 되는 것
-
-```swift
+// 4
 let cloneRef = reference1
 ```
 
-인스턴스가 복사되는 것이 아닌 같은 힙 영역을 가르키는 것, 또한 힙 영역 특성상 메모리 해제가 필요한 데 이를 ARC가 해줌
-<br/>
+1. `Person` 클래스의 이니셜라이저를 호출하는 지점에 `"John Appleseed is being initialized"` 라는 메시지가 출력
 
-> 적어도 하나의 Strong 참조가 있기 때문에
+   ```swift
+   init(name: String) {
+       self.name = name
+       print("\(name) is being initialized")
+   }
+   ```
 
-**_즉 reference1, cloneRef이 같은 메모리를 참조_**
+   ---
 
-## RC
+2. `Optional` 이므로 자동으로 `nil` 값으로 초기화, 현재 `Person` 인스턴스를 참조를 하지 않음
 
-> 힙 영역의 메모리를 관리하는 방법은 GC와 RC가 존재
+    ```swift
+    // referencel 는 스택영역에 할당
+    var reference1: Person?
+    ```
 
-- 참조 계산 시점
+    ---
 
-  - 컴파일 시점에 언제 참조되고 해제되는지 결정되어 런타임 때 그대로 실행
+3. 새로운 `Person` 인스턴스가 `reference1` 변수에 할당
 
-- 장점
+   ```swift
+   // Person(name: "John Appleseed")은 힙영역에 할당
+   reference1 = Person(name: "John Appleseed")
+   ```
 
-  - 개발자가 참조 해제 시점을 파악할 수 있음
-  - RunTime 시점에 추가 리소스가 발생하지 않음
+   - `reference1` 에서 새 `Person` 인스턴스에 `Strong` 참조가 생김
 
-- 단점
-  - 순환 참조가 발생 시 영구적으로 메모리가 해제되지 않을 수 있음
+   - 적어도 하나의 `Strong` 참조가 있기 때문에 **ARC** 는 `Person` 이 메모리에 유지되고 할당이 취소되지 않게 되는 것
 
-```swift
-reference1 = nil
-reference2 = nil
-```
+   ---
 
-두 개의 변수에 nil을 할당하여 이러한 두 개의 강한 참조(원래 참조 포함)를 중단하면 하나의 강한 참조가 유지되고 Person 인스턴스가 할당 해제되지 않음
+4. 인스턴스가 복사되는 것이 아닌 같은 힙 영역을 가르킴
 
-```swift
-reference3 = nil // "John Appleseed is being deinitialized"
-```
+    ```swift
+    let cloneRef = reference1
+    ```
+    
+    - 적어도 하나의 **`Strong` 참조**가 있기 때문에
+    
+    - 즉 `reference1` , `cloneRef` 이 같은 **메모리를 참조**
 
-ARC는 세 번째이자 마지막 강한 참조가 끊어질 때까지 Person 인스턴스를 할당 해제 X
+---
 
-이 시점에서 Person 인스턴스를 더 이상 사용하지 않는다는 것이 분명해짐
+## Strong Reference(강한 참조)
+
+> 강한 참조(Strong Reference)는 객체의 소유권을 나타내는 기본 참조 방식
+
+1. **기본 참조 방식:**
+
+    Swift에서 클래스 인스턴스에 대한 기본 참조 방식은 강한 참조
+
+2. **Reference Counting 증가:**
+
+    강한 참조는 객체를 참조할 때마다 해당 객체의 참조 카운트를 1씩 증가
+
+3. **메모리 해제 방지:**
+
+    **Reference Counting(참조 카운트)** 가 `0`이 될 때까지 객체는 메모리에서 해제되지 않음
+
+4. **순환 참조 문제:**
+
+    여러 객체가 서로 **Strong Reference(강한 참조)** 를 하는 경우, 순환 참조가 발생하여 **메모리 누수(memory leak)** 가 발생할 수 있음
+
+    ```swift
+    reference1 = nil
+    reference2 = nil
+    ```
+
+    - 두 개의 변수에 nil을 할당하여 이러한 두 개의 **강한 참조(원래 참조 포함)**를 중단하면
+    
+    - 하나의 강한 참조가 유지되고  `Person 인스턴스` 가 할당 해제되지 않음
+
+    ```swift
+    reference3 = nil // "John Appleseed is being deinitialized"
+    ```
+
+    - **ARC** 는 세 번째이자 마지막 **강한 참조**가 끊어질 때까지 `Person` 인스턴스를 할당 해제되지 않음
+
+    - [강한 참조 순환](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC02)
+---
 
 ## 참고
 
-[공식문서 - ARC-in-Action](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/)
+- [공식문서 - ARC-in-Action](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/)
 
-[블로그 참조](https://babbab2.tistory.com/26)
+- [블로그 참조 - 메모리 관리 (1/3) - ARC(Automatic Reference Counting)(개발자 소들이)](https://babbab2.tistory.com/26)
+
+- [블로그 참조 - ARC와 강한 참조 사이클(Strong Reference Cycle)(PinguiOS:티스토리)](https://icksw.tistory.com/204)
+
+- [블로그 참조 - 클로저를 사용할 때 주의할 점 - Memory Leaks, Retain Cycle, nested closure 첫 번째(김종권의 iOS 앱 개발 알아가기)](https://ios-development.tistory.com/1233)
+
