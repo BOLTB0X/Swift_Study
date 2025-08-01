@@ -1,6 +1,6 @@
-# Unowned Optional References(미소유 옵셔널 참조)
+# Unowned Optional References(비소유 옵셔널 참조)
 
-> 클래스에 대한 선택적 참조를 'Unowend '으로 표시할 수 있음
+> 클래스에 대한 옵셔널 참조를 'Unowend '으로 표시할 수 있음
 
 ```swift
 unowned var reference: SomeClass?
