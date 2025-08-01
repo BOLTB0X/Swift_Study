@@ -1,12 +1,12 @@
-# Unowned References(미소유 참조)
+# Unowned References(비소유 참조)
 
-> 미소유 참조는 참조하는 인스턴스를 강하게 유지하지 않음
+> 비소유 참조는 참조하는 인스턴스를 강하게 유지하지 않음
 
-- **약한 참조**와 달리 **미소유 참조** 는 다른 인스턴스의 수명이 같거나 더 긴 경우에 사용
+- **약한 참조**와 달리 **비소유 참조** 는 다른 인스턴스의 수명이 같거나 더 긴 경우에 사용
 
-- **약한 참조**와 달리 **미소유 참조** 는 항상 값을 가질 것으로 예상 -> `nil`로 선언하지 않음
+- **약한 참조**와 달리 **비소유 참조** 는 항상 값을 가질 것으로 예상 -> `nil`로 선언하지 않음
 
-- 참조가 항상 할당 해제되지 않은 인스턴스를 참조한다고 확신하는 경우에만 **미소유 참조(Unowned References)** 를 사용
+- 참조가 항상 할당 해제되지 않은 인스턴스를 참조한다고 확신하는 경우에만 **비소유 참조(Unowned References)** 를 사용
 
 ---
 
@@ -51,11 +51,11 @@ class CreditCard {
 
 - `CreditCard` (신용카드)는 반드시 어떤 고객에 속해 있어야 함 -> `customer`: `non-optional` , `unowned`
 
-- `weak` 와 반대로 둘 중에 수명이 더 긴 인스턴스를 가리키는 인스턴스를 `unowned` (미소유) 참조로 선언
+- `weak` 와 반대로 둘 중에 수명이 더 긴 인스턴스를 가리키는 인스턴스를 `unowned` (비소유) 참조로 선언
 
 ---
 
-## 미소유 참조 사용
+## 비소유 참조 사용
 
 1. `Customer` 인스턴스를 생성하고 이를 사용하여 해당 `Customer`의 `card` 프로퍼티로 새 `CreditCard` 인스턴스를 초기화하고 할당
 
@@ -68,11 +68,11 @@ class CreditCard {
         <img src="https://docs.swift.org/swift-book/images/org.swift.tspl/unownedReference01@2x.png" alt="Example Image" width="80%">
     </p>
 
-    `Customer` 인스턴스에는 `CreditCard` 인스턴스에 대한 **강한 참조**가 있고 `CreditCard` 인스턴스에는 `Customer` 인스턴스에 대한 **미소유 참조**가 존재
+    `Customer` 인스턴스에는 `CreditCard` 인스턴스에 대한 **강한 참조**가 있고 `CreditCard` 인스턴스에는 `Customer` 인스턴스에 대한 **비소유 참조**가 존재
 
     ---
 
-2. `Customer` 의 **미소유 참조** 로 인해 `john`의 **강한 참조** 를 해제하면, `Customer` 인스턴스에 대한 **강한 참조** 가 해제 됌
+2. `Customer` 의 **비소유 참조** 로 인해 `john`의 **강한 참조** 를 해제하면, `Customer` 인스턴스에 대한 **강한 참조** 가 해제 됌
 
     <p align="center">
         <img src="https://docs.swift.org/swift-book/images/org.swift.tspl/unownedReference02@2x.png" alt="Example Image" width="80%">
@@ -110,7 +110,7 @@ class CreditCard {
 
 ---
 
-TODO: 옵셔널 미소유참조, 에러 관계
+TODO: 옵셔널 비소유참조, 에러 관계
 
 ## 참고
 
