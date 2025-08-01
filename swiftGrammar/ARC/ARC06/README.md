@@ -59,7 +59,7 @@ unit4A!.tenant = john
 
 ---
 
-## 3. 미소유(`unowned`) 참조 를 사용해야는 case
+## 3. 비소유(`unowned`) 참조 를 사용해야는 case
 
 ```swift
 class Country {
