@@ -15,4 +15,10 @@
 
 3. [Weak References](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC03)
 
-4. [Unowned References(미소유 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)
+4. [Unowned References(비소유 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)
+
+5. [Unowned Optional References(비소유 옵셔널 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC05)
+
+6. [Unowned References and Implicitly Unwrapped Optional Properties](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC06)
+
+7. [Strong Reference Cycles for Closures](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/ARC/ARC07/ARC07.md)
