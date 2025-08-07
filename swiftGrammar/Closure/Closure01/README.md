@@ -161,19 +161,43 @@ let Hello = { print("Hello Closure") }
 
 ### Trailing Closure(후행 클로저)
 
-> 메서드의 마지막 파라미터가 **Closure** 일 때, 이를 파라미터 값 형식이 아닌 메서드 뒤에 붙여 작성된 Closure(Argument Label은 생략 가능)
+> 메서드의 마지막 파라미터가 **Closure** 일 때
 
-- Closure를 파라미터 처럼 사용
+> 이를 파라미터 값 형식이 아닌 메서드 뒤에 붙여 작성된 Closure(Argument Label은 생략 가능)
 
-  ```swift
-  func HelloFunc(closure: () -> ()) {
-      closure()
-  }
+```swift
+func someFunctionThatTakesAClosure(closure: () -> Void) {
+    // function body goes here
+}
 
-  HelloFunc(closure: { () -> () in
-      print("Hello Closure")
-  })
-  ```
+
+// Here's how you call this function without using a trailing closure:
+
+
+someFunctionThatTakesAClosure(closure: {
+    // closure's body goes here
+})
+
+
+// Here's how you call this function with a trailing closure instead:
+
+
+someFunctionThatTakesAClosure() {
+    // trailing closure's body goes here
+}
+```
+
+Closure를 파라미터 처럼 사용
+
+```swift
+func HelloFunc(closure: () -> ()) {
+    closure()
+}
+
+HelloFunc(closure: { () -> () in
+    print("Hello Closure")
+})
+```
 
 ---
 
