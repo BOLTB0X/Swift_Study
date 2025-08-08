@@ -1,93 +1,155 @@
-# @autoclosure
+# `@autoclosure`
 
 > An autoclosure is a closure that’s automatically created to wrap an expression that’s being passed as an argument to a function.
 
-```swift
-// 일반적인 Closure
-func funcA(_ closure: () -> Void) {
-    closure()
-}
+**"표현식"** 을 자동으로 **"클로저"** 로 감싸주는 문법
 
-funcA({ print("Hello Closure") }) // Hello Closure
-```
-
-메서드에 argument로 전달되는 표현식을 래핑하기 위해 자동으로 생성되는 클로저
-
-```swift
-func funcA(_ closure: @autoclosure () -> Void) {
-    closure()
-}
-
-funcA(print("Hello Closure"))
-```
-
-@autoclosure는 클로저를 호출할 때까지 내부 코드가 실행되지 않기 때문에 평가, 실행을 지연시키기 가능
-
-> 대표적으로 [assert(condition:message:file:line:)](<https://developer.apple.com/documentation/swift/assert(_:_:file:line:)>) 함수가 예
-
-```swift
-func assert(
-    _ condition: @autoclosure () -> Bool,
-    _ message: @autoclosure () -> String = String(),
-    file: StaticString = #file,
-    line: UInt = #line
-)
-```
-
-위에서 파라미터로 전달된 일반 구문 & 함수를 클로저로 래핑(Wrapping) 하는 것이 **@autoclosure**
-
-**_즉 함수의 파라미터의 클로저는 실제 클로저로 전달 받는 것이 아니지만 클로저 처럼 사용하는 것_**
-
-클로저와 차이는 실제 클로저를 전달하는 것이 아니기 때문에 파라미터로 값을 넘기는 것 처럼 ()를 통해 구문을 넘겨 주는 것
-
-**_@autoclosure를 사용할 경우, @autoclosure의 파라미터가 반드시 없어야 함_**
-
-## Closure와 차이
-
-- **Closure**
-  코드 블록을 변수에 저장하고, 필요할 때 실행할 수 있는 기능이므로 파라미터와 반환값을 가질 수 있고, 메서드와 유사한 방식
-  <br/>
-
-- **@autoclosure**
-  argument로 전달되는 표현식을 자동으로 클로저로 변환해주는 것
-  <br/>
-
-## @autoclosure 존재 이유
-
-> @autoclosure는 함수의 성능을 개선하기 위해 사용
-
-메서드가 호출될 때 전달된 argument를 Closure로 자동으로 변환하여 실행
-
-이렇게 하면 argument를 전달하는데 사용되는 클로저 코드를 직접 작성 X
-
-**메서드가 호출될 때 매개변수가 이미 계산되어 있기 때문에, 메서드 내부에서 사용하기 위해 다시 계산할 필요가 없으므로 성능이 향상**
-
-- closure
+- 일반적인 **Closure**
 
   ```swift
-  func commonClosure(_ x: Int, func: (Int) -> Int) -> Int {
-      return function(x)
+  // 일반적인 Closure
+  func funcA(_ closure: () -> Void) {
+      closure()
   }
 
-  let result1 = commonClosure(5, func: { x in x * 2 })
-  print(result1) // 10
+  funcA({ print("Hello Closure") }) // Hello Closure
   ```
+  ---
 
-  commonClosure 메서드에 클로저를 전달하여 실행
-  <br/>
-
-- @autoclosure
+- `@autoclosure`
 
   ```swift
-  func autoClosure(_ x: Int, function: @autoclosure () -> Int) -> Int {
-      return function()
+  func funcA(_ closure: @autoclosure () -> Void) {
+    closure()
   }
 
-  let result2 = autoClosure(5, function: 5 * 2)
-  print(result2) // 10
+  funcA(print("Hello Closure"))
   ```
 
-  @autoclosure 어노테이션을 사용하여 argument로 전달되는 표현식을 자동으로 클로저로 변환하여 실행
+  ---
+
+- 대표적으로 [assert(condition:message:file:line:)](<https://developer.apple.com/documentation/swift/assert(_:_:file:line:)>) 함수가 예
+
+  ```swift
+  func assert(
+      _ condition: @autoclosure () -> Bool,
+      _ message: @autoclosure () -> String = String(),
+      file: StaticString = #file,
+      line: UInt = #line
+  )
+  ```
+
+---
+
+## 사용 이유
+
+평가(실행)를 지연시키고 싶을 때 유용
+
+- ex: *함수에 넘긴 표현식을 지금 바로 실행하지 않고, 나중에 필요할 때 실행하고 싶을 때*
+
+- 성능 최적화, 부작용 방지 등에 자주 사용
+
+```swift
+var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+print(customersInLine.count)
+// 5
+
+let customerProvider = { customersInLine.remove(at: 0) }
+print(customersInLine.count)
+// 5
+
+print("Now serving \(customerProvider())!")
+// Now serving Chris!
+
+print(customersInLine.count)
+// 4
+```
+
+```swift
+var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+let customerProvider = { customersInLine.remove(at: 0) } // 1
+```
+
+1. `customerProvider` : 클로저
+
+   - `remove(at: 0)` 는 배열에서 첫 요소를 제거하는 부작용 있는 코드이지만
+
+   - `{ customersInLine.remove(at: 0) }` 로 감쌌기 때문에 실행이 지연
+
+   ---
+
+```swift
+print(customerProvider()) // 2
+```
+
+2. 여기서 실제로 실행됨
+
+---
+
+
+## 일반 클로저를 함수에 전달하는 경우
+
+```swift
+func serve(customer customerProvider: () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+
+serve(customer: { customersInLine.remove(at: 0) })
+```
+
+- 클로저를 명시적으로 `serve()` 에 넘김
+
+- 이 방식은 명확하지만 `{}` 괄호가 필요
+
+---
+
+## `@autoclosure` 로 간결하게 쓰기
+
+```swift
+func serve(customer customerProvider: @autoclosure () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+
+serve(customer: customersInLine.remove(at: 0))
+```
+
+- `customersInLine.remove(at: 0)` 를 자동으로 클로저로 감쌌기 때문에
+
+```swift
+serve(customer: { customersInLine.remove(at: 0) })
+```
+
+- 내부적으로는 이렇게 처리되는 것
+
+---
+
+## `@autoclosure` + `@escaping`
+
+```swift
+class CustomerManager {
+    private(set) var customerProviders: [() -> String] = []
+
+    func collect(_ provider: @autoclosure @escaping () -> String) {
+        customerProviders.append(provider)
+    } // collect
+
+    func serveAll() {
+        print("Collected \(customerProviders.count) closures.")
+        for provider in customerProviders {
+            print("Now serving \(provider())!")
+        }
+    } // serveAll
+}
+```
+
+- `collect(_:)` 함수는 `provider` 인수로 전달된 클로저를 호출하는 대신,  클로저를 `customerProviders` 배열에 추가
+
+- 이 배열은 함수 범위 밖에서 선언되었으므로, 배열에 있는 클로저는 함수가 반환된 후에 실행될 수 있음
+
+- 따라서 `provider` 인수의 값은 함수 범위를 벗어날 수 있어야 함
+
+---
 
 ## 참고
 
