@@ -99,7 +99,7 @@ for item in 90...100 {
 //Async (2) : 40
 ```
 
-sync와 다르게 async는 동시에 처리되어 섞여서 print됌
+sync와 다르게 async는 동시에 처리되어 섞여서 `print` 됌
 
 ```swift
 DispatchQueue.global(qos: .userInteractive).async {
@@ -245,34 +245,37 @@ for item in 90...100 {
 //Async (2) : 40
 ```
 
-두번째 코드에서 qos중 우선순위를 수정해서 실행해보면 우선순위가 높은 DispatchQueue가 먼저 실행되는 것을 알 수있음
+두번째 코드에서 `qos` 중 우선순위를 수정해서 실행해보면 우선순위가 높은 `DispatchQueue`가 먼저 실행되는 것을 알 수있음
 
 **_이를 정리하면_**
 
-- DispatchQueue
-  Serial(순차적) / Concurrent(동시적)으로 나뉘며 각각 sync/async로 실행
-  <br/>
+- `DispatchQueue`
 
-- Main Queue
+  **Serial(순차적)** / **Concurrent(동시적)** 으로 나뉘며 각각 sync/async로 실행
+
+- `Main Queue`
+
   Main Thread에서 돌아가는 Serial Queue, sync로 실행하면 데드락 발생하므로 금지
-  <br/>
 
-- Global Queue
+- `Global Queue`
+  
   qos에 따라서 우선순위 부여할 수 있는 Concurrent Queue
-  <br/>
+  
 
-- Custom Queue
+- **Custom Queue**
+
   default는 Serial이며 attributes를 이용하여 Concurrent로 변경 가능
-  <br/>
+  
+---
 
 ## 참고
 
-[공식문서 - dispatchqueue](https://developer.apple.com/documentation/dispatch/dispatchqueue)
+- [공식문서 - dispatchqueue](https://developer.apple.com/documentation/dispatch/dispatchqueue)
 
-[공식문서 - os_dispatch_queue_concurrent](https://developer.apple.com/documentation/dispatch/os_dispatch_queue_concurrent)
+- [공식문서 - os_dispatch_queue_concurrent](https://developer.apple.com/documentation/dispatch/os_dispatch_queue_concurrent)
 
-[블로그 참고 - 1](https://seons-dev.tistory.com/215)
+- [블로그 참고 - [DispatchQueue란?] (GCD : Grand Central Dispatch)(서근)](https://seons-dev.tistory.com/215)
 
-[블로그 참고 - 2](https://zeddios.tistory.com/972)
+- [블로그 참고 - Combine (3) - Scheduler(zeddios)](https://zeddios.tistory.com/972)
 
-[블로그 참고 -3](https://furang-note.tistory.com/37)
+- [블로그 참고 - DispatchQueue - Serial, Concurrent](https://furang-note.tistory.com/37)
