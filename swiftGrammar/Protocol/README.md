@@ -1,94 +1,261 @@
-## Protocol
+# Protocol
 
-> **프로토콜은 특정 작업이나 기능에 적합한 함수, 프로퍼티 및 기타 요구 사항의 청사진을 정의**
+> Define requirements that conforming types must implement.
 
-### Protocol 정의
+> 특정 작업이나 기능에 적합한 메서드, 프로퍼티 및 기타 요구 사항의 청사진을 정의함
 
-공식 문서의 설명 문구와 코드에 따르면, 함수, 프로퍼티 및 기타 요구 사항의 선언을 포함하며 정의
+`class`, `struct`, `enum` 이 이 프로토콜을 **"채택(conform)"** 해서 구현 가능
+
+- 프로토콜의 요구 사항을 충족하는 모든 타입은 해당 프로토콜을 준수한다고 표현
+
+- 프로토콜을 확장하여 이러한 요구 사항 중 일부를 구현하거나 준수하는 타입이 활용할 수 있는 추가 기능을 구현할 수 있음
+
+*"이 타입은 반드시 이런 기능을 제공할 거야"* 라는 **계약(contract)** 같은 것
+
+- **"약속된 규격"** 또는 **"인터페이스(interface)"** 개념
+
+
+---
+
+## Protocol Syntax
+
+<details>
+<summary> contents </summary>
 
 ```swift
-// 클래스, 구조 및 열거형과 비슷하게 프로토콜을 정의
 protocol SomeProtocol {
-		// 요구 사항을 정의
-		let somethingg: Int = 0
-    func doSomething()
-}
-
-// 이름 뒤에 콜론(:)으로 프로토콜들을 채택
-struct SomeStructure: FirstProtocol, AnotherProtocol {
-    // 요구 사항을 정의
-		let somethingg: Int = 0
-    func doSomething()
-}
-
-// 슈퍼클래스(상속해올 클래스)가 있고 클래스가 프로토콜을 채택할 때,
-// 해당 슈퍼클래스 이름을 프로토콜 앞에 나열하고 쉼표로 구분
-class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
-    // 요구 사항을 정의
-		let somethingg: Int = 0
-    func doSomething()
+    // protocol definition goes here
 }
 ```
 
-### 요구사항
-
-공식 문서의 설명 문구와 코드에 따르면, 요구 사항을 채택하는 형태(클래스, 구조체, 열거형)에게 어떤 동작이나 기능을 작성하여 사용할 ‘프로토콜’ 요구사항을 맞춘다 함
+- 클래스, 구조체, 그리고 열거형과 유사한 방법으로 프로토콜을 정의합
 
 ```swift
-// MARK: - 프로퍼티 요구사항
+struct SomeStructure: FirstProtocol, AnotherProtocol {
+    // structure definition goes here
+}
+```
+
+- 사용자 지정 유형은 특정 프로토콜을 채택함을 나타내기 위해 타입 이름 뒤에 프로토콜 이름을 콜론(`:`)으로 구분하여 정의
+
+- 여러 프로토콜을 나열할 수 있으며, 각 프로토콜은 쉼표(`,`)로 구분
+
+```swift
+class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
+    // class definition goes here
+}
+```
+
+</details>
+
+---
+
+## Property Requirements
+
+<details>
+<summary> contents </summary>
+
+> 프로토콜은 모든 준수 타입이 인스턴스 프로퍼티 또는 타입 프로퍼티에 특정 이름과 유형을 제공하도록 요구할 수 있음
+
+> 프로토콜은 프로퍼티가 저장된 프로퍼티인지 연산 프로퍼티인지는 지정하지 않고, 필요한 프로퍼티 이름과 유형만 지정
+
+> 또한 각 프로퍼티가 `gettable`인지, `gettable` 및 `settable` 인지도 지정이 필요
+
+---
+
+### gettable과 settable 인 프로퍼티를 요구할 경우
+
+```swift
+protocol SomeProtocol {
+    var mustBeSettable: Int { get set }
+    var doesNotNeedToBeSettable: Int { get }
+}
+```
+
+- 프로퍼티 요구사항은 항상 `var` 키워드와 함께 변수 프로퍼티로 선언
+
+- `gettable` 과 `settable` 프로퍼티는 타입 선언 뒤에
+
+    - `settable` 프로퍼티 **(읽기/쓰기)** : `{ get set }`
+    
+    - `gettable` 프로퍼티 **(읽기 전용)** : `{ get }`
+
+    ---
+
+```swift
+struct MyStruct: SomeProtocol {
+    var mustBeSettable: Int
+    var doesNotNeedToBeSettable: Int {  // 읽기 전용은 계산 속성으로 구현
+        return mustBeSettable * 2
+    }
+}
+```
+
+- 구현은 채택한 타입이 직접 해야 함
+
+---
+
+### 타입 프로퍼티 요구할 경우
+
+```swift
+protocol AnotherProtocol {
+    static var someTypeProperty: Int { get set }
+}
+```
+
+- 프로토콜에 정의할 때 `static` 키워드를 접두사로 둠
+
+---
+
+### 단일 인스턴스 프로퍼티 요구사항
+
+> `FullyName` 프로토콜은 완벽한 이름을 제공하기 위해 준수하는 타입을 요구하는 ex
+
+```swift
 protocol FullyNamed {
-		// 그냥 'FullName'이라는 전체 이름을 제공할 수 있어야 한다 점만
-		// (gettable 인스턴스 프로퍼티가 있어야함) 지정
     var fullName: String { get }
 }
+```
 
-struct Person: FullyNamed { // 'Person'이라는 구조체는
-		// 'FullyNamed' 프로토콜의 요구사항인 전체 이름을 제공할 수 있는 변수가 존재
-    var fullName: String
+이 프로토콜은 다른 준수하는 타입을 지정하지 않으며 타입이 자체에 대한 전체 이름을 제공해야 된다고만 지정하고 프로토콜은 모든 `FullyNamed` 타입이 `String` 타입의 `fullName` 이라는 `gettable` 인스턴스 프로퍼티를 가져야함
+
+1. `FullyNamed` 프로토콜은 채택하고 준수하는 `struct`
+
+    ```swift
+    struct Person: FullyNamed {
+        var fullName: String
+    }
+
+    let john = Person(fullName: "John Appleseed")
+    ```
+
+    ---
+
+2. `FullyNamed` 프로토콜을 채택하고 준수하는 더 복잡한 `class`
+
+    ```swift
+    class Starship: FullyNamed {
+        var prefix: String?
+        var name: String
+        init(name: String, prefix: String? = nil) {
+            self.name = name
+            self.prefix = prefix
+        }
+        var fullName: String {
+            return (prefix != nil ? prefix! + " " : "") + name
+        }
+    }
+    var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
+    // ncc1701.fullName is "USS Enterprise"
+    ```
+
+</details>
+
+---
+
+## Method Requirements
+
+<details>
+<summary> contents </summary>
+
+> 프로토콜은 준수하는 타입에 의해 구현되기 위해 지정한 인스턴스 메서드와 타입 메서드를 요구할 수 있음
+
+이 메서드는 일반적인 인스턴스와 타입 메서드와 같은 방식으로 명시적으로 프로토콜의 정의의 부분으로 작성되지만 중괄호(`{}`)가 없거나 메서드 본문이 없음
+
+일반적인 메서드와 같은 규칙에 따라 가변 파라미터는 허용되지만 기본 값은 프로토콜의 정의 내에서 메서드 파라미터에 대해 지정될 수 없음
+
+```swift
+protocol SomeProtocol2 {
+    static func someTypeMethod()
 }
+```
 
-let john = Person(fullName: "John Appleseed")
-//john.fullName is "John Appleseed" 라 잘 출력
+- 타입 프로퍼티 요구사항과 마찬가지로 프로토콜에 정의될 때 `static` 키워드를 항상 타입 메서드 요구사항 앞에 표기
 
-// MARK: - 함수 요구사항
+- 클래스에 의해 구현될 때 타입 메서드 요구사항에 `class` 또는 `static` 키워드가 접두사로 붙는 경우에도 마찬가지
 
-/// 프로퍼티와 동일하게 프로토콜 정의의 일부로 작성됨
-/// 중괄호나 메소드 내부의 정의가 존재 X.
-/// 프로토콜 정의 내의 함수 매개변수에는 디폴트를 지정 X
+---
 
+### 단일 인스턴스 메서드 요구사항을 가지는 프로토콜을 정의
+
+> 아래의 예제는 단일 인스턴스 메서드 요구사항을 가지는 프로토콜을 정의하는 코드
+
+```swift
 protocol RandomNumberGenerator {
     func random() -> Double
 }
+```
 
+`RandomNumberGenerator` 프로토콜은 호출될 때마다 `Double` 값을 반환하는 `random` 이라는 인스턴스 메서드를 가지는 모든 준수하는 타입을 요구
+
+- `RandomNumberGenerator `프로토콜은 각 난수가 생성되는 방법에 대해 어떠한 것도 가정하지 않음
+
+- 단순히 생성기가 새로운 난수를 생성하는 표준 방법을 제공하면 됩
+
+```swift
 class LinearCongruentialGenerator: RandomNumberGenerator {
     var lastRandom = 42.0
     let m = 139968.0
     let a = 3877.0
     let c = 29573.0
-
-		// RandomNumberGenerator 프로토콜의 요구사항인 'random'이라는 메소드가 존재
-		// 위 프로토콜 선언 부에 비어놓았던 random 메소드를 세부 기능은
-		// 사용할 class나 구조체에서 요구사항에 맞춰 코딩
     func random() -> Double {
         lastRandom = ((lastRandom * a + c)
             .truncatingRemainder(dividingBy:m))
         return lastRandom / m
     }
 }
+```
 
-// MARK: - Mutating
-// struct와 enum 내에서 메서드를 정의하여 내부 프로퍼티를 변경할 때 사용하는 키워드
-// 프로토콜에서 사용할 때는 일반 struct와 enum에서 사용하는 방식과 매우 비슷
-// 공식문서에선 토클 스위치로 이를 설명함
+이 클래스는 `linear congruential generator` 로 알려진 의사 난수 `pseudorandom number` 생성기 알고리즘을 구현
 
+```swift
+let generator = LinearCongruentialGenerator()
+print("Here's a random number: \(generator.random())")
+
+// "Here's a random number: 0.3746499199817101"
+print("And another one: \(generator.random())")
+// "And another one: 0.729023776863283"
+```
+
+</details>
+
+---
+
+## Mutating Method Requirements
+
+<details>
+<summary> contents </summary>
+
+> 메서드가 속한 인스턴스를 **수정/변경** 해야하는 경우가 있는데,
+
+> 값 타입 (구조체와 열거형)에 대한 인스턴스 메서드의 경우 메서드의 `func` 키워드 앞에 `mutating` 키워드를 위치시켜 메서드가 속한 인스턴스와 인스턴스의 모든 프로퍼티를 수정할 수 있음
+
+프로토콜을 채택하는 모든 타입의 인스턴스를 변경하기 위한 프로토콜 인스턴스 메서드 요구사항을 정의하는 경우
+
+프로토콜의 정의의 부분으로 `mutating` 키워드로 메서드를 표시함
+
+이를 통해 구조체와 열거형이 프로토콜을 채택하고 메서드 요구사항을 충족할 수 있음
+
+
+> `mutating` 으로 프로토콜 인스턴스 메서드 요구사항을 표시하면 클래스에 대한 해당 메서드의 구현을 작성할 때, `mutating` 키워드를 작성할 필요가 없음
+
+> `mutating` 키워드는 구조체와 열거형에 의해서만 사용
+
+---
+
+###  단일 인스턴스 메서드 요구사항을 정의 ex
+
+```swift
 protocol Togglable {
     mutating func toggle()
 }
+```
 
+- `toggle()` 메서드는 호출될 때 준수하는 인스턴스의 상태를 변경하기 위한 메서드를 나타내기 위해, `Togglable` 프로토콜 정의의 부분으로 `mutating` 키워드로 표시
+
+```swift
 enum OnOffSwitch: Togglable {
     case off, on
-
-		// Togglable 프로토콜에 맟춰 세부 기능 코딩
     mutating func toggle() {
         switch self {
         case .off:
@@ -98,41 +265,39 @@ enum OnOffSwitch: Togglable {
         }
     }
 }
-
-var lightSwitch = OnOffSwitch.off
-lightSwitch.toggle()
 ```
 
-### 그 외
+- `OnOffSwitch` 라는 열거형을 정의
 
-- Delegation
+- 열거형 `case` 인 `on` 과 `off` 를 나타내기 위해 2개의 상태를 변경
 
-  Delegation 말 그대로 ‘위임자’, 프로토콜를 공부해보면 틀만 설계해 놓고 사용자가 사용할 때 세부사항을 코딩하므로 즉 ‘너가 알아서 해라’ 라는 느낌
+```swift
+var lightSwitch = OnOffSwitch.off
+lightSwitch.toggle()
+// lightSwitch is now equal to .on
+```
 
-  주로 프로토콜(또는 인터페이스)을 사용하여 다른 객체에 어떤 기능을 위임하거나 대리 수행하도록 하는 디자인 패턴.(ex. UITableView, UICollectionView)
+</details>
 
-### Inheritance(상속)과 차이
+---
 
-1. 관계
+## Initializer Requirements
 
-   > Inheritance(상속) 은 주로 걔층구조 형성
+<details>
+<summary> contents </summary>
+</details>
 
-   Protocol 은 Class , Strcut , Enum 등 다양한 관계 형성 가능
-   <br/>
+## Protocols that Have Only Semantic Requirements(의미적 요구사항만 가지는 프로토콜)
 
-2. 다중
+<details>
+<summary> contents </summary>
+</details>
 
-   > Swift에선 Inheritance(상속) 은 단일 상속만 가능
-
-   Protocol은 다중 채택이 가능
-   <br/>
-
-3. 확장성
-
-   > Inheritance(상속)은 자식 Class에서 Override 가능 (확장 수정)
-
-   Protocol은 요구사항만 정의 , 수정 과 확장 X
 
 ## 참고
 
-[공식문서 - Protocol](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols)
+- [공식문서 - Protocol](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols)
+
+- [블로그 참고 - Protocol 이해하기 (1/6) - Protocol이 도대체 뭔가요?(개발자소들이)](https://babbab2.tistory.com/174)
+
+- [gitBook 참고 - Protocol](https://bbiguduk.gitbook.io/swift/language-guide-1/protocols)
