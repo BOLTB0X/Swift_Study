@@ -285,6 +285,70 @@ lightSwitch.toggle()
 
 <details>
 <summary> contents </summary>
+
+> 프로토콜은 준수하는 타입에 초기화 구문을 구현하도록 요구할 수 있음
+
+```swift
+protocol SomeProtocol3 {
+    init(someParameter: Int)
+}
+```
+
+초기화 구문을 작성하지만 중괄호(`{}`) 또는 초기화 구문 본문 없이 작성
+
+---
+
+### Class Implementations of Protocol Initializer Requirements(프로토콜 초기화 구문 요구사항의 클래스 구현)
+
+```swift
+class SomeClass: SomeProtocol3 {
+    required init(someParameter: Int) {
+        // initializer implementation goes here
+    }
+}
+```
+
+- `required` 키워드와 함께 초기화 구문 구현에 표시
+
+- `required` 수식어를 사용하면 준수하는 클래스의 **모든 하위 클래스에 초기화 구문 요구사항의 명시적** 또는 **상속된 구현을 제공하여 프로토콜을 준수할 수 있음**
+
+- *cf.* `final` *클래스는 하위 클래스가 될 수 없으므로* `final` *키워드로 표시된 클래스에* `required` *키워드를 프로토콜 초기화 구문 구현에 표시할 필요가 없음* 
+
+```swift
+protocol SomeProtocol4 {
+    init()
+}
+
+class SomeSuperClass {
+    init() {
+        // initializer implementation goes here
+    }
+}
+
+class SomeSubClass: SomeSuperClass, SomeProtocol4 {
+    // "required" from SomeProtocol conformance; "override" from SomeSuperClass
+    required override init() {
+        // initializer implementation goes here
+    }
+}
+```
+
+- 하위 클래스가 상위 클래스의 지정된 **초기화 구문을 재정의**
+
+- 프로토콜로 부터 일치하는 초기화 구문 요구사항이 구현되면 `required` 와 `override` 키워드 둘 다 초기화 구문 구현에 표시함
+
+---
+
+### Failable Initializer Requirements(실패 가능한 초기화 구문 요구사항)
+
+> 프로토콜은 **실패 가능한 초기화 구문 (Failable Initializers)** 에 정의 된대로 준수하는 타입에 대해 실패 가능한 초기화 구문 요구사항을 정의할 수 있음
+
+- Failable Initializer(실패 가능한 초기화 구문) 요구사항은 준수하는 타입에 실패 가능하거나 실패 불가능한 초기화 구문에 의해 충족될 수 있음
+
+- 실패 불가능한 초기화 구문 요구사항은 **실패 불가능한 초기화 구문** 또는 **implicitly unwrapped(암시적 언래핑)** 된 실패 가능한 초기화 구문에 의해 충족될 수 있음
+
+---
+
 </details>
 
 ## Protocols that Have Only Semantic Requirements(의미적 요구사항만 가지는 프로토콜)
