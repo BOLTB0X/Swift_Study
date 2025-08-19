@@ -6,74 +6,76 @@
 
 ## Contents
 
-- [Grammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
+### [Grammar](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar)
 
-  - [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)
+- [String](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/README.md)
 
-  - [Struct & Class](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Strcut%20%26%20Class)
+- [Struct & Class](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Strcut%20%26%20Class)
 
-  - [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
+- [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
 
-  - [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
+- [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
 
-  - [Inheritance - basic](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
+- [Inheritance - basic](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
 
-  - [Inheritance - property Overriding](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Propery%20Overriding/README.md)
+- [Inheritance - property Overriding](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Propery%20Overriding/README.md)
 
-  - [Protocol](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Protocol)
+- [Protocol](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Protocol)
 
-  - [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Codable/README.md)
+- [Codable](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Codable/README.md)
 
-  - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
+- [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
 
-  - [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC)
+- [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC)
 
-  - [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
+- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
 
-  - [High Order Function(고차함수)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/High%20Order%20Function)
+- [High Order Function(고차함수)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/High%20Order%20Function)
 
   - [split](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/split.md)
 
   - [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
 
-  - [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
+- [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
 
-  - [KVC-KVO](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/KVC-KVO)
-    <br/>
+- [KVC-KVO](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/KVC-KVO)
+
+---
+
+### [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
+
+- [Data object](https://github.com/BOLTB0X/Swift_Study/tree/main/study/DataObject)
+
+- [Life cycle](https://github.com/BOLTB0X/Swift_Study/tree/main/study/LifeCycle)
+
+- [MVVM pattern](https://github.com/BOLTB0X/Swift_Study/tree/main/study/mvvmTutorial.playground)
+
+- [Singleton](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Singleton)
+
+- [Memory structure](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Memory)
+
+- [Stack OverFlow](https://github.com/BOLTB0X/Swift_Study/blob/main/study/StackOverFlow/README.md)
+
+- [GCD(Grand Central Dispatch)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/GCDPlayground)
+
+- [DispatchQueue](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/dispatchQue.md)
+
+- [Sync/Async](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/syncAsync2.md)
+
+- [Main Thread & Global Thread](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Main%20Thread%20%26%20Global%20Thread)
+
+- [joined을 사용하여 Array -> String, 에러의 이유는?](https://github.com/BOLTB0X/Swift_Study/tree/main/study/String-And-Array)
+
+- [if let VS guard 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
+
+- [split vs components 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/README.md)
 
 ---
 
-- [Study](https://github.com/BOLTB0X/Swift_Study/tree/main/study)
-
-  - [Data object](https://github.com/BOLTB0X/Swift_Study/tree/main/study/DataObject)
-
-  - [Life cycle](https://github.com/BOLTB0X/Swift_Study/tree/main/study/LifeCycle)
-
-  - [MVVM pattern](https://github.com/BOLTB0X/Swift_Study/tree/main/study/mvvmTutorial.playground)
-
-  - [Singleton](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Singleton)
-
-  - [Memory structure](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Memory)
-
-  - [Stack OverFlow](https://github.com/BOLTB0X/Swift_Study/blob/main/study/StackOverFlow/README.md)
-
-  - [GCD(Grand Central Dispatch)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/GCDPlayground)
-
-  - [DispatchQueue](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/dispatchQue.md)
-
-  - [Sync/Async](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/syncAsync2.md)
-
-  - [Main Thread & Global Thread](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Main%20Thread%20%26%20Global%20Thread)
-
-  - [joined을 사용하여 Array -> String, 에러의 이유는?](https://github.com/BOLTB0X/Swift_Study/tree/main/study/String-And-Array)
-
-  - [if let VS guard 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Guard/README.md)
-
-  - [split vs components 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/README.md)
-    <br/>
-
----
+### Problem
 
 - [기초 문제 1 - 코딩테스트 입문(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩테스트입문)
 
 - [기초 문제 2 - 코딩 기초 트레이닝(Programmers)](https://github.com/BOLTB0X/Swift_Study/tree/main/코딩%20기초%20트레이닝)
+
+---
