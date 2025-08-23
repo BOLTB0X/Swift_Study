@@ -355,8 +355,143 @@ class SomeSubClass: SomeSuperClass, SomeProtocol4 {
 
 <details>
 <summary> contents </summary>
+
+> 프로토콜 선언은 모든 요구사항이 포함되어야 하는 것은 아님
+
+> 프로토콜은 의미적(semantic) 요구사항으로 사용할 수도 있음
+
+Swift 표준 라이브러리는 필수 메서드나 프로퍼티를 가지지 않는 여러 프로토콜이 정의되어 있음
+
+- `Sendable` : [동시성 도메인 간에 공유할 수 있는 값을 나타냄](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency#Sendable-Types)
+
+- `Copyable` : [함수에 값을 전달할 때, Swift가 복사할 수 있는 값을 나타냄](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/declarations#Borrowing-and-Consuming-Parameters)
+
+- `BitwiseCopyable` : 비트 단위로 복사할 수 있는 값을 나타냄
+
+- *ex*
+
+    ```swift
+    struct MyStruct2: Copyable {
+        var counter = 12
+    }
+
+    extension MyStruct2: BitwiseCopyable { }
+    ```
+
 </details>
 
+---
+
+## Protocols as Types(타입으로써 프로토콜)
+
+<details>
+<summary> contents </summary>
+
+> 프로토콜 자체는 어떤 기능도 구현하지 않습니다. 이런점과 상관없이 코드에서 타입으로 프로토콜을 사용할 수 있음
+
+프로토콜은 **"규약"** 이지 **구현** 이 아님
+
+- `class`나 `struct`, `enum`은 기능(메서드, 프로퍼티 등)을 실제로 구현 가능
+
+- 프로토콜은 어떤 기능이 있어야 한다는 **"규약"** 만 정의
+
+- Swift에서는 프로토콜 자체를 타입처럼 사용 가능
+
+프로토콜을 타입처럼 사용하는 세 가지 방식이 존재
+
+---
+
+### Generics(제네릭) 제약조건으로 프로토콜 사용
+
+
+- 제네릭 함수나 타입을 정의할 때, **"이 제네릭은 반드시 특정 프로토콜을 따른 타입이어야 한다"** 라고 제약을 걸 수 있음
+
+- 그러면 그 함수는 프로토콜을 준수하는 어떤 타입이든 받아서 동작할 수 있음
+
+- *ex*
+
+    ```swift
+    protocol Drawable {
+        func draw()
+    }
+
+    func render<T: Drawable>(_ item: T) {
+        item.draw()
+    }
+    ```
+
+    - 호출자는 `Drawable` 을 준수하는 타입을 넘길 수 있고, 함수는 제네릭하게 동작
+
+---
+
+### 불투명한 타입 (Opaque Type)
+
+- `some Protocol` 문법을 쓰는 경우
+
+- 함수가 반환값의 **"구체적인 타입"** 은 숨기고, **"이 타입이 특정 프로토콜을 따른다"** 라는 사실만 노출함
+
+- 즉, API를 쓰는 사람은 정확히 어떤 타입인지 알 수 없지만, 최소한 그 프로토콜에 정의된 기능은 쓸 수 있음
+
+- *ex*
+
+    ```swift
+    // 프로토콜을 따르는 구체 타입
+    struct Circle: Drawable {
+        func draw() {
+            print("그려그려그려 원을~")
+        }
+    }
+
+    //  불투명 타입 (Opaque Type) 사용
+    func makeShape() -> some Drawable {
+        return Circle()
+    }
+    ```
+
+---
+
+### 박스형 프로토콜 타입 (Existential Types)
+
+- 그냥 프로토콜을 타입처럼 직접 쓰는 방식
+
+   - ex: `var shape: Drawable`
+
+- 여기서는 구체적인 타입(`Circle`, `Square` 등)은 런타임 시점에 결정
+
+- Swift는 이걸 가능하게 하기 위해 내부적으로 **"박스(Box)"** 라는 간접 계층을 둠
+
+- 그 결과 런타임 유연성은 얻지만, 성능 비용이 생기고, 또 **"프로토콜에 정의된 멤버"** 까지만 접근할 수 있음
+
+- *ex*
+
+    ```swift
+    // 프로토콜을 따르는 구체 타입
+    struct Circle: Drawable {
+        func draw() {
+            print("그려그려그려 원을~")
+        }
+    }
+
+    struct Square: Drawable {
+        func draw() {
+            print("그려그려그려 사각형을~")
+        }
+    }
+
+    // 박스형 프로토콜 타입 (Existential Type) 사용
+    func testExistential() {
+        var shape: Drawable = Circle()  // Circle을 할당
+        shape.draw()
+    
+        shape = Square()  // 런타임 시점에 다른 타입으로 교체 가능
+        shape.draw()
+    }
+    ```
+
+</details>
+
+
+---
 
 ## 참고
 

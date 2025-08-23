@@ -1,5 +1,5 @@
 import Foundation
-
+import SwiftUI
 
 protocol SomeProtocol {
     var mustBeSettable: Int { get set }
@@ -115,3 +115,50 @@ class SomeSubClass: SomeSuperClass, SomeProtocol4 {
         // initializer implementation goes here
     }
 }
+
+struct MyStruct2: Copyable {
+    var counter = 12
+}
+
+extension MyStruct2: BitwiseCopyable { }
+
+protocol Drawable {
+    func draw()
+}
+
+func render<T: Drawable>(_ item: T) {
+    item.draw()
+}
+
+
+// 프로토콜을 따르는 구체 타입
+struct Circle: Drawable {
+    func draw() {
+        print("그려그려그려 원을~")
+    }
+}
+
+struct Square: Drawable {
+    func draw() {
+        print("그려그려그려 사각형을~")
+    }
+}
+
+//  불투명 타입 (Opaque Type) 사용
+func makeShape() -> some Drawable {
+    return Circle()
+}
+
+// 박스형 프로토콜 타입 (Existential Type) 사용
+func testExistential() {
+    var shape: Drawable = Circle()  // Circle을 할당
+    shape.draw()
+    
+    shape = Square()  // 런타임 시점에 다른 타입으로 교체 가능
+    shape.draw()
+}
+
+let s = makeShape()
+s.draw()
+
+testExistential()
