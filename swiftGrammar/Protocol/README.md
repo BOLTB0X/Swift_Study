@@ -1,4 +1,4 @@
-# Protocol
+# 1. Protocol (Syntax / Requirements / as Types)
 
 > Define requirements that conforming types must implement.
 
@@ -14,8 +14,8 @@
 
 - **"약속된 규격"** 또는 **"인터페이스(interface)"** 개념
 
-
 ---
+
 
 ## Protocol Syntax
 
