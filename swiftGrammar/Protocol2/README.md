@@ -1,4 +1,4 @@
-# 2. Protocol (Delegation / )
+# 2. Protocol (Delegation / Protocol Conformance)
 
 > Define requirements that conforming types must implement.
 
@@ -137,3 +137,10 @@ game.play(rounds: 3)
 </details>
 
 ---
+
+## 확장으로 프로토콜 준수성 추가 (Adding Protocol Conformance with an Extension)
+
+<details>
+<summary> contents </summary>
+
+</details>
