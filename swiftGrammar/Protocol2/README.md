@@ -143,4 +143,49 @@ game.play(rounds: 3)
 <details>
 <summary> contents </summary>
 
+> 특정 프로토콜을 따르는 타입들에 대해 공통 기능을 추가할 수 있음
+
+제네릭 `where` : 확장 대상에 조건(제약)을 주기 가능
+
+- *ex) “`Element`가 `Equatable`일 때만 이 메서드 제공”*
+
+```swift
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}
+```
+
+- `where Element: Equatable`:
+
+    컬렉션 내부의 요소(`Element`)가 `Equatable` 프로토콜을 따라야만 이 확장을 적용할 수 있다는 조건
+
+- `allEqual()`:
+
+    컬렉션의 모든 원소가 같으면 `true`, 다르면 `false`
+
+```swift
+let equalNumbers = [100, 100, 100, 100, 100]
+let differentNumbers = [100, 100, 200, 100, 200]
+
+print(equalNumbers.allEqual())      // true
+print(differentNumbers.allEqual())  // false
+```
+
+- `equalNumbers`: 모든 원소가 100 -> `true` 
+
+- `differentNumbers` : 중간에 200이 섞여 있음 -> `false`
+
+- 제약조건 없는 확장을 하면 모든 `Collection` 타입에 다 붙어버려서,
+`==` 같은 연산자를 쓸 수 없는 타입에도 에러 발생
+
+- `where Element`: `Equatable`를 붙여서
+"요소들이 `==` 연산을 할 수 있는 타입일 때만" `allEqual()`을 제공하는 것
+
 </details>
