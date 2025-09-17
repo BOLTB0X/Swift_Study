@@ -100,3 +100,22 @@ game.play(rounds: 3)
 //Player 2 won round 2
 //Player 1 won round 3
 //Player 2 won!
+
+
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}
+
+
+let equalNumbers = [100, 100, 100, 100, 100]
+let differentNumbers = [100, 100, 200, 100, 200]
+
+print(equalNumbers.allEqual())      // true
+print(differentNumbers.allEqual())  // false
