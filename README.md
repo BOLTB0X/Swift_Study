@@ -70,6 +70,8 @@
 
 - [split vs components 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/README.md)
 
+- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
+
 ---
 
 ### Problem
