@@ -14,11 +14,11 @@
 
 - [Optional](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional)
 
-- [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
+  - [Optional Chaining](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Optional%20Chaining)
 
 - [Inheritance - basic](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/InheritanceStudy.playground)
 
-- [Inheritance - property Overriding](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Propery%20Overriding/README.md)
+  - [Inheritance - property Overriding](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/Propery%20Overriding/README.md)
 
 - [Protocol](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Protocol)
 
@@ -26,9 +26,29 @@
 
 - [Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure)
 
+  1. [Closure Expressions](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure01)
+
+  2. [Auto Closure](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure02)
+
+  3. [Escaping Closures](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure03)
+
+  4. [Closures capture](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Closure/Closure04)
+
 - [ARC](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC)
 
-- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
+  1. [ARC란?](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC01)
+
+  2. [Strong Reference Cycles](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC02)
+
+  3. [Weak References](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC03)
+
+  4. [Unowned References(비소유 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC04)
+
+  5. [Unowned Optional References(비소유 옵셔널 참조)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC05)
+
+  6. [Unowned References and Implicitly Unwrapped Optional Properties](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/ARC/ARC06)
+
+  7. [Strong Reference Cycles for Closures](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/ARC/ARC07/ARC07.md)
 
 - [High Order Function(고차함수)](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/High%20Order%20Function)
 
@@ -36,9 +56,25 @@
 
   - [components](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/components.md)
 
+  - [map](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/map.md)
+
+  - [filter](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/filter.md)
+
+  - [reduce](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/reduce.md)
+
+  - [sorted](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/sorted.md)
+
+  - [forEach](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/forEach.md)
+
+  - [compactMap](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/compactMap.md)
+
+  - [flatMap](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/High%20Order%20Function/flatMap.md)
+
 - [get/set, willSet/didSet](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Getter-Setter)
 
 - [KVC-KVO](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/KVC-KVO)
+
+- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
 
 ---
 
@@ -70,7 +106,11 @@
 
 - [split vs components 차이](https://github.com/BOLTB0X/Swift_Study/blob/main/study/Split-Components/README.md)
 
-- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
+- [Keypath](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Keypath)
+
+- [Tuple](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Tuple)
+
+- [상속(Inheritance) VS 프로토콜(Protocol)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Inheritance-Protocol)
 
 ---
 
