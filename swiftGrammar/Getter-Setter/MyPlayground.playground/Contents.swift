@@ -15,17 +15,32 @@ class Rectangle {
             height *= ratio
         }
     }
+    
+    var per: Double { 2 * (width + height) }
 }
 
 let rect = Rectangle()
 rect.width = 5.0
 rect.height = 4.0
 print(rect.area)
+
+print(rect.per)
 // 20.0
 
 rect.area = 40.0
 print(rect.width)
 // 10.0
+
+struct Counter {
+    var value: Int = 0
+
+    var doubled: Int {
+        mutating set {
+            value = newValue / 2
+        }
+        get { value * 2 }
+    }
+}
 
 class StepCounter {
     var totalSteps: Int = 0 {
@@ -48,3 +63,49 @@ stepCounter.totalSteps = 100
 stepCounter.totalSteps = 150
 //totalSteps: 150 설정
 //50 steps 더 해짐
+
+
+var value: Int = 0 {
+    willSet(next) {
+        print("about to set to \(next)")
+    }
+    didSet(prev) {
+        print("changed from \(prev)")
+    }
+}
+
+
+struct TimerModel {
+    // 저장 프로퍼티 (옵저버 사용)
+    var seconds: Int = 0 {
+        willSet {
+            print("will set seconds -> \(newValue)")
+        }
+        didSet {
+            print("did set seconds: \(oldValue) -> \(seconds)")
+        }
+    }
+
+    // 계산 프로퍼티 (get/set) — read-only 가능
+    var minutes: Int {
+        get { seconds / 60 }
+        set {
+            // 값을 분 단위로 설정하면 seconds를 갱신
+            seconds = newValue * 60
+        }
+    }
+
+    // 읽기 전용 계산 프로퍼티 (한 줄 shorthand)
+    var display: String { "\(minutes)m \(seconds % 60)s" }
+}
+
+var t = TimerModel()
+t.seconds = 90
+// will set seconds -> 90
+// did set seconds: 0 -> 90
+
+print(t.display) // "1m 30s"
+t.minutes = 2    // setter 호출 -> seconds = 120
+
+
+
