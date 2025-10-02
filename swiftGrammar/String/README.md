@@ -65,6 +65,10 @@ for i in 0..<5 {
 
 8. [String - String 쪼개기](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/split.md)
 
+9. [String - 대소문자 판별 관련](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/LetterCase.md)
+
+10. [replacingOccurrences](https://github.com/BOLTB0X/Swift_Study/blob/main/swiftGrammar/String/replacingOccurrences.md)
+
 ## 자료 출처
 
 [애플 개발자 공식문서 -String-](https://developer.apple.com/documentation/swift/string)
