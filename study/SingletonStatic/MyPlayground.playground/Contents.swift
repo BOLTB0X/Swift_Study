@@ -43,3 +43,34 @@ print("A count:", aCount) // 2
 
 bCount = Counter.increment(bCount)
 print("B count:", bCount) // 1 (서로 독립된 값)
+
+
+class DatabaseManager: @unchecked Sendable {
+    static let shared = DatabaseManager()
+    private init() {} // 외부에서 생성 금지
+
+    var connected = false
+
+    func connect() {
+        connected = true
+        print("DB 연결 완료")
+    } // connect
+} // DatabaseManager
+
+DatabaseManager.shared.connect()
+print(DatabaseManager.shared.connected) // true
+
+struct MathUtil {
+    static func add(_ a: Int, _ b: Int) -> Int {
+        return a + b
+    } // add
+    
+    static func square(_ n: Int) -> Int {
+        return n * n
+    } // square
+
+    static let pi = 3.141592
+} // MathUtil
+
+print(MathUtil.square(4)) // 16
+print(MathUtil.pi) // 3.141592
