@@ -112,6 +112,8 @@
 
 - [상속(Inheritance) VS 프로토콜(Protocol)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Inheritance-Protocol)
 
+- [Singleton Pattern vs static 방식](https://github.com/BOLTB0X/Swift_Study/tree/main/study/SingletonStatic)
+
 ---
 
 ### Problem
