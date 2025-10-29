@@ -4,6 +4,9 @@
 
 > Thread : 하나의 프로세스 내에서 실행되는 여러 작업 **흐름 단위**
 
+<p align="center">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
+</p>
 
 | 구분 | 프로세스 (Process) | 스레드 (Thread) |
 |:------|:-----------------------------|:--------------------------------|
@@ -45,6 +48,10 @@
 
 ### 특징
 
+<p align="center">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
+</p>
+
 1. 각 프로세스는 독립된 주소 공간을 가짐 **(Code, Data, Stack, Heap)**
 
     - 다른 앱과 메모리 공유 X, ex. *카카오톡 앱이 죽어도 유튜브 앱엔 영향 X*
@@ -58,7 +65,7 @@
 ### 상태 전이
 
 <p align="center">
-   <img src="https://developer.apple.com/assets/elements/icons/metal/metal-96x96_2x.png" alt="Example Image" width="30%">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
 </p>
 
 1. 생성 (New) : 프로세스 생성 상태
@@ -81,6 +88,10 @@
 
 ### 정의
 
+<p align="center">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
+</p>
+
 - 스레드는 프로세스 내에서 각각 **Stack** 만 따로 할당받고 **Code** , **Data** , **Heap** 영역은 공유
  
 - 프로세스는 하나 이상의 스레드를 가질 수 있음
@@ -102,19 +113,6 @@
 - 자세한 것은 [iOS 환경에서 Thread](https://github.com/BOLTB0X/SwiftUI/tree/main/study/Thread) 참고
 
 ---
-
-<!-- 
-
-## Context Switching
-
-> CPU or 코어 에서 실행중이던 프로세스나 스레드가 다른 프로세스 or 스레드로 교체되는 것
-
-- 컴퓨터가 현재 실행 중인 프로세스나 스레드의 상태(Context)를 저장하고, 다른 프로세스나 스레드의 상태를 불러와 실행을 이어가는 과정
-
-- CPU가 여러 작업을 동시에 처리하는 것처럼 보이게 하는 **멀티태스킹 환경에서 필수적인 작업**
-
-### ontext Switching 이 발생하는 이유
--->
 
 ## 참고
 
