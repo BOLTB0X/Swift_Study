@@ -5,7 +5,7 @@
 > Thread : 하나의 프로세스 내에서 실행되는 여러 작업 **흐름 단위**
 
 <p align="center">
-   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/OS.png?raw=true" alt="Example Image" width="100%">
 </p>
 
 | 구분 | 프로세스 (Process) | 스레드 (Thread) |
@@ -49,7 +49,7 @@
 ### 특징
 
 <p align="center">
-   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/Process1.png?raw=true" alt="Example Image" width="100%">
 </p>
 
 1. 각 프로세스는 독립된 주소 공간을 가짐 **(Code, Data, Stack, Heap)**
@@ -89,7 +89,7 @@
 ### 정의
 
 <p align="center">
-   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%81%ED%83%9C%EC%A0%84%EC%9D%B4.png?raw=true" alt="Example Image" width="100%">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/Process2.png?raw=true" alt="Example Image" width="100%">
 </p>
 
 - 스레드는 프로세스 내에서 각각 **Stack** 만 따로 할당받고 **Code** , **Data** , **Heap** 영역은 공유
