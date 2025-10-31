@@ -1,11 +1,15 @@
 # 메모리 구조
 
-> 프로그램이 실행되기 위해서는 먼저 프로그램이 메모리에 로드(load)되어야 함
+> 프로그램이 실행되기 위해서는 먼저 프로그램이 메모리에 로드(load)되어야 함<br/>
 > 또한, 프로그램에서 사용되는 변수들을 저장할 메모리도 필요
 
-![image.jpg2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Ft05ky%2FbtqKqySZfku%2FEp8GYaxIHEw7Jpre4W2ag1%2Fimg.png)
+<p align="center">
+   <img src="https://github.com/BOLTB0X/Swift_Study/blob/main/study/OS/Process1.png?raw=true" alt="Example Image" width="70%">
+</p>
 
-OS는 RAM에 프로그램을 실행을 위헤 메모리를 load하는 데 이걸 Code, Data, Heap, Stack 공간에 할당
+OS는 RAM에 프로그램을 실행을 위헤 메모리를 load하는 데 이걸 **Code** , **Data** , **Heap**, **Stack** 공간에 할당
+
+---
 
 ## Code 영역
 
@@ -15,9 +19,11 @@ CPU는 코드 영역에 저장된 명령어를 하나씩 가져가서 처리하�
 
 즉 소스 코드를 작성하면 **'그 소스 코드'가 기계어(어셈블리)형태로 저장(적재)** 되는 메모리 영역
 
+---
+
 ## Data 영역
 
-> 메모리의 data 영역은 프로그램의 global 변수와 static 변수가 저장되는 영역
+> 메모리의 data 영역은 프로그램의 global 변수와 static 변수가 저장되는 영역<br/>
 > data 영역은 프로그램의 시작과 함께 할당되며, 프로그램이 종료되면 메모리가 해체(소멸)
 
 실행 도중 변수 값이 변경될 가능성이 있으니 **_Read-Write_**
@@ -58,18 +64,20 @@ swift에선 **Class Instance, Closure 같은 참조 타입의 값은 힙(Heap) �
 - heap의 장점
 
   - 메모리 크기에 대한 제한 X
-    <br/>
+    
   - 본질적인 범위가 전역이기 때문에, 프로그램의 모든 함수에서 액세스 할 수 있음
-    <br/>
+    
 
 - heap의 단점
   - 할당작업, 해제 작업으로 인한 속도 저하
-    <br/>
+    
   - heap 손상(이중 해제, 해제 후 사용 등) 작업으로 인한 속도 저하
-    <br/>
+    
   - heap 병합(두 개 이상 쓰레드가 동시에 접근하려 할 때 Lock이 걸림)으로 인한 속도 저하
-    <br/>
+    
   - 메모리를 직접 관리해야 함(해제해주지 않을 시 메모리 누수 발생)
+
+---
 
 ## Stack 영역
 
@@ -98,42 +106,42 @@ func addFunc(_ a:Int, _ b:Int) -> Int { // 파라미터는 스택에 할당
 - Stack의 장점
 
   - CPU가 Stack 메모리를 효율적으로 구성하기 때문에 속도가 매우 빠름
-    <br/>
+
   - 메모리를 직접 해제를 해주지 않아도 됨
-    <br/>
+
 
 - Stack의 단점
+
   - 메모리 크기에 대한 제한 있음 -> 무한히 할당 X
-    <br/>
+    
   - local 변수만 액세스 가능
-    <br/>
+
+---
 
 ## 각 영역의 관계
 
 1. Heap 과 Stack
 
    - data 의 크기를 정확히 알수 없거나 Stack 에 할당(저장)하기엔 큰 data 의 경우엔 Heap 에 할당
-     <br/>
 
    - 그 외의 경우는 Stack 에 할당
-     <br/>
 
    - 만약 Stack에 많은 data가 할당하게 되면 -> [스택 오버플로우](https://github.com/BOLTB0X/Swift_Study/tree/main/study/StackOverFlow)
-     <br/>
 
 2. 메모리 관계
 
    - Heap 영역은 낮은 메모리 주소부터 할당 받는 것이고, Stack 영역은 높은 메모리 주소부터 할당 받는 것임
-     <br/>
 
    - Heap 또한 자신의 영역 외로 확장을 계속하면 **힙 오버 플로우** 발생
 
+  ---
+
 ## 참고
 
-[tcpschool 참조](http://www.tcpschool.com/c/c_memory_structure)
+[TCP School - 메모리의 구조](http://www.tcpschool.com/c/c_memory_structure)
 
-[블로그 참조 - 1](https://babbab2.tistory.com/25_)
+[블로그 참고 - 메모리 구조 (Code, Data, Stack, Heap)(개발자 소들이)](https://babbab2.tistory.com/25_)
 
-[블로그 참조 - 2](https://engkimbs.tistory.com/147)
+[블로그 참고 - 프로세스의 메모리 영역(새로비)](https://engkimbs.tistory.com/147)
 
-[블로그 참조 -3](https://junghn.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0-%EC%8A%A4%ED%83%9DStack-%ED%9E%99Heap-%EB%8D%B0%EC%9D%B4%ED%84%B0Data%EC%98%81%EC%97%AD)
+[블로그 참고 - 메모리 구조 / 스택(Stack), 힙(Heap), 데이터(Data)(코딩 시그널:티스토리)](https://junghn.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0-%EA%B8%B0%EC%B4%88-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0-%EC%8A%A4%ED%83%9DStack-%ED%9E%99Heap-%EB%8D%B0%EC%9D%B4%ED%84%B0Data%EC%98%81%EC%97%AD)
