@@ -16,38 +16,43 @@ DispatchQueue. Queue의 종류 . sync/async {
 
 **App의 Main Thread 또는 Backgoround Thread에서 순차적(serially) 또는 동시에(concurrently) Task 실행을 관리하는 객체**
 
+---
+
 ## Seral & Concurrent
 
 > dispatchQueue의 동작 방식은 Seral과 Concurrent로 나뉨
 
 1. **Seral**
 
-   - 이전(before) task가 끝나면 다음 task를 순차적(serially)으로 실행하는 직렬 형태의 Queue
-     <br/>
+   - 이전(before) *task* 가 끝나면 다음 *task*를 **순차적(serially)** 으로 실행하는 **직렬 형태의 Queue**
 
-   - 한 Task를 실행하고 그 실행이 끝날 때까지 que에 있는 다른 task을 잠시 미루고 있다가 바로 전의 task가 끝나면 실행
+   - 한 `Task`를 실행하고 그 실행이 끝날 때까지 **que** 에 있는 다른 *task* 을 잠시 미루고 있다가 바로 전의 *task* 가 끝나면 실행
+
+   ---
 
 2. **Concurrent**
 
-   - 이전(before) task가 끝날 때 까지 기다리지 않고 병렬 형태로 동시에(concurrently) 실행되는 Queue
-     <br/>
+   - 이전(before) *task* 가 끝날 때 까지 기다리지 않고 병렬 형태로 **동시에(concurrently)*** 실행되는 **Queue**
+     
+   - **Queue** 에 있는 작업을 동시에 별도의 **Thread** 를 사용하여 실행
 
-   - Queue에 있는 작업을 동시에 별도의 Thread를 사용하여 실행
+   ---
 
-DispatchQueue의 종류는 3가지가 존재
+**DispatchQueue** 의 종류는 3가지가 존재
 
-- main Queue
-- global Queue
-- custom Queue
+1. main Queue
+2. global Queue
+3. custom Queue
+
+---
 
 ## Main Queue(Seral)
 
 > The dispatch queue associated with the main thread of the current process.
 
-- main Queue는 task들을 main Thread에 처리
-  <br/>
+- **main Queue** 는 *task* 들을 **main Thread** 에 처리
 
-- UIApplicationMain은 자동으로 **Main Queue**를 생성하고 main Thread와 연결함
+- `UIApplicationMain` 은 자동으로 **Main Queue**를 생성하고 **main Thread** 와 연결함
 
 ```swift
 class var main: DispatchQueue { get }
@@ -55,7 +60,7 @@ class var main: DispatchQueue { get }
 
 > iOS 에서 Main Thread는 하나만 존재, main Queue 또한 시스템에 의해 하나만 생성되기 때문에, main Queue를 불어올 때는 인스턴스를 호출하는 방식 이용
 
-task들을 순차적으로 처리하며, 한 번에 1개의 task 만 처리하는 DispatchQueue
+*task* 들을 순차적으로 처리하며, 한 번에 1개의 *task* 만 처리하는 **DispatchQueue**
 
 ```swift
 print("1")
@@ -82,20 +87,21 @@ DispatchQueue.main.async {
 // 슈우우우우우ㅜ우우웅3
 ```
 
-runloop가 끝나야 mainQueue에 들어가 있는 task들이 순차적으로 실행
+*runloop* 가 끝나야 **mainQueue** 에 들어가 있는 *task* 들이 순차적으로 실행
 
 **_cf. 주의 사항_**
 
 > Main Thread가 Thread-Safe하지 않으므로 Main Queue에는 절대 Sync Task를 추가할 수 없음
 
+---
+
 ## Global Queue(Concurrent)
 
 > Returns the global system queue with the specified quality-of-service class
 
-- Global Queue는 App 전반에 걸쳐 사용할 수 있는 GCD 큐
-  <br/>
+- **Global Queue** 는 App 전반에 걸쳐 사용할 수 있는 GCD 큐
 
-- Queue의 QoS(Quality of Service) 수준을 지정 가능 -> 이를 통해 각 작업에 대한 우선 순위를 제어할 수 있음
+- Queue의 **QoS(Quality of Service)** 수준을 지정 가능 -> 이를 통해 각 작업에 대한 우선 순위를 제어할 수 있음
 
 ```swift
 class func global(qos: DispatchQoS.QoSClass = .default) -> DispatchQueue
@@ -121,15 +127,15 @@ defaultQueue.sync {
 }
 ```
 
-병렬적으로 동시에 실행이 되긴 하지만 QoS를 통해 우선순위를 결정 가능
+- 병렬적으로 동시에 실행이 되긴 하지만 QoS를 통해 우선순위를 결정 가능
 
-우선순위가 높은 작업은 낮은 순위의 작업보다 더 빨리 실행
+- 우선순위가 높은 작업은 낮은 순위의 작업보다 더 빨리 실행
 
-네트워크 요청이나 파일 처리와 같이 시간이 오래 걸리는 작업들은 Main Queue가 아닌 Background Thread에서 실행을 함 (Global Queue을 이용하여)
+- 네트워크 요청이나 파일 처리와 같이 시간이 오래 걸리는 작업들은 **Main Queue** 가 아닌 **Background Thread** 에서 실행을 함 (`Global Queue`을 이용하여)
 
 ### qQoS(Quality of Service)
 
-UI update는 background에서 실행되는 task보다 우선시 되어야하듯 우선순위를 지정이 필요
+UI update는 **background** 에서 실행되는 *task* 보다 우선시 되어야하듯 우선순위를 지정이 필요
 
 ```swift
 DispatchQueue.global(qos: .userInteractive) {}  //Main Queue
@@ -140,7 +146,9 @@ DispatchQueue.global(qos: .background) {}       //눈에 보이지 않는 부분
 DispatchQueue.global(qos: .unspecified) {}
 ```
 
-아래로 갈수록 우선순위가 떨어짐, qos를 지정을 안하면 default로 실행
+아래로 갈수록 우선순위가 떨어짐, `qos`를 지정을 안하면 `default` 로 실행
+
+---
 
 ## Custom Queue
 
@@ -152,6 +160,8 @@ concurrentQueue.async {
     // task
 }
 ```
+
+---
 
 ## Initializers
 
@@ -167,24 +177,24 @@ convenience init(
 )
 ```
 
-- label
-  디버깅 도구(예: Instruments, stackshots, crash reports 등)에서 큐를 고유하게 식별하기 위해 사용되는 문자열 label, parameter는 옵셔널
-  <br/>
+- `label` : 디버깅 도구(예: Instruments, stackshots, crash reports 등)에서 큐를 고유하게 식별하기 위해 사용되는 문자열 `label`, **parameter** 는 옵셔널
 
-- qos
-  우선순위를 결정
-  <br/>
+- `qos` : 우선순위를 결정
 
-- attributes
-  queue와 관련된 속성, concurrent attributes을 포함하여 작업을 동시에 실행하는 dispatchQueue를 생성 가능, 이 attributes 생략하면 dispatchQueue는 task가 직렬로 실행 됌
-  <br/>
+- `attributes`: queue와 관련된 프로퍼티, **concurrent attributes** 을 포함하여 작업을 동시에 실행하는 **dispatchQueue** 를 생성 가능, 이 `attributes` 생략하면 **dispatchQueue는 task가 직렬로 실행 됌**
 
-- autoreleaseFrequency
-  queue가 스케줄한 블록이 생성한 객체를 자동해제하는 빈도
-  <br/>
+- `autoreleaseFrequency` : queue가 스케줄한 블록이 생성한 객체를 자동해제하는 빈도
 
-- target
-  블록을 실행할 대상 queue
+- `target` : 블록을 실행할 대상 queue
+
+| 시나리오    | 사용 예시            | 코드 ex                                                          |
+| ------- | ---------------- | -------------------------------------------------------------- |
+| UI 업데이트 | 백그라운드 연산 후 UI 반영 | `DispatchQueue.main.async { self.label.text = "Done" }`        |
+| 네트워크 요청 | 비동기 API 호출 처리    | `DispatchQueue.global(qos: .background).async { fetchData() }` |
+| 데이터 동기화 | 공유 자원 접근 제어      | `DispatchQueue(label: "sync.queue").sync { sharedVar += 1 }`   |
+| 이미지 캐싱  | 병렬 다운로드 처리       | `DispatchQueue.concurrentPerform(iterations: 5) { ... }`       |
+
+---
 
 ## 참고
 
