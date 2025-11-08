@@ -32,6 +32,7 @@
 | **스레드(Thread)**   | 프로세스 안에서 실제 코드를 실행하는 흐름 단위<br>앱 실행 시 **기본적으로 메인 스레드(Main Thread)** 가 하나 생성되어 UI, 이벤트, 런루프 등을 처리  |
 | **메인 스레드의 특징**    | UI 업데이트, 터치 이벤트, UIKit 접근은 **무조건 메인 스레드에서만 가능**.<br>시간이 오래 걸리는 작업을 메인 스레드에서 실행하면 -> UI 멈춤(“앱이 멈춘 것처럼”) |
 
+**“스레드 관리 = 성능 관리”**
 
 ---
 
@@ -51,8 +52,7 @@
 
 ## **동시성 (Concurrency)**  : 논리적 동시에 실행되는
 
----
+- [Concurrency](https://github.com/BOLTB0X/Swift_Study/tree/main/swiftGrammar/Concurrency)
 
-## **병렬성 (Parallelism)** : 물리적으로 동시에 실행
 
----
+cf. **병렬성 (Parallelism)** : 물리적으로 동시에 실행
