@@ -116,12 +116,9 @@
 
 - [GCD(Grand Central Dispatch)](https://github.com/BOLTB0X/Swift_Study/tree/main/study/GCDPlayground)
 
-- [DispatchQueue](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/dispatchQue.md)
+  - [DispatchQueue](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/dispatchQue.md)
 
-- [Sync/Async](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/syncAsync2.md)
-
-- [Main Thread & Global Thread](https://github.com/BOLTB0X/Swift_Study/tree/main/study/Main%20Thread%20%26%20Global%20Thread)
-
+  - [Sync/Async](https://github.com/BOLTB0X/Swift_Study/blob/main/study/GCDPlayground/syncAsync2.md)
 
 ---
 
